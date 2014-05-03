@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+		<title>Example 例子 1.32</title>
+		<link type="text/css" rel="stylesheet" href="lessonStyle.css">
+	</head>
+	<body>
+		<h1>Example 例子 1.32</br>
+			Hurdle Karel 卡雷爾跨欄</h1>
+		<p>This is an example that we did in the video. 
+			You are encouraged to play around with it, to see how it all works. 
+			When you are done, click the arrow to go to the next problem.</br>
+			這是我們在視頻中做了一個榜樣。我們鼓勵你玩它，看看它是如何工作的。當你完成後，單擊箭頭進入下一個問題。</p>
+		<h2>Starting World and Ending World 世界開始和結束的世界 </h2>
+		<p><img src="../images/1-32HurdleKarel.png" alt="Result Image" title="Result Image"></p>
+		<h2>Example Code 示例代碼 </h2>
+		<p>
+			/* </br>
+			 * This program has karel jump over two &ensp; 這個程序有卡雷爾跳了兩個 </br>
+			 * hurdles and then move all of the way &ensp; 障礙，然後將所有的方式 </br>
+			 * to the edge of the world. &ensp; 對世界的邊緣。 </br>
+			 */ </br>
+			function start(){  &ensp; 函數的開始(){ </br>
+			// Karel jumps two hurdles in this &ensp; 卡雷爾跳躍在這個兩關 </br>
+			// program. &ensp; 程序。 </br>
+				&ensp; &ensp; runToHurdle(); &ensp; 運行要跨欄(); </br>
+				&ensp; &ensp; jumpHurdle(); &ensp; 跳跨欄(); </br>
+				&ensp; &ensp; runToHurdle(); &ensp; 運行要跨欄(); </br>
+				&ensp; &ensp; jumpHurdle(); &ensp; 跳跨欄(); </br>
+				&ensp; &ensp; runToFinish(); &ensp; 運行完成(); </br>
+			} </br>
+			</br>
+			/* </br>
+			* Precondition: Karel has just jumped the &ensp; 前提條件：卡雷爾剛剛躍升 </br>
+			* last hurdle, and is facing east. &ensp; 最後一關，並面向東方。 </br>
+			* Postcondition: Karel is all of the way &ensp; 後置條件：卡雷爾是所有的方式 </br>
+			* at the end of the world. &ensp; 在世界的盡頭。 </br>
+			*/ </br>
+			function runToFinish(){  &ensp; 函數運行完成(){ </br>
+				&ensp; &ensp; move(); &ensp; 移動(); </br>
+				&ensp; &ensp; move(); &ensp; 移動(); </br>
+				&ensp; &ensp; move(); &ensp; 移動(); </br>
+				&ensp; &ensp; move(); &ensp; 移動(); </br>
+			} </br>
+			</br>
+			/* </br>
+			* Precondition: Karel is facing east, three &ensp; 前提條件：卡雷爾是面向東方，三 </br>
+			* spots away from a hurdle. &ensp; 插播遠離障礙。 </br>
+			* Postcondition: Karel is standing right in front of a hurdle. &ensp; 後置條件：卡雷爾是站在正確的一道坎面前。 </br>
+			*/ </br>
+			function runToHurdle(){ &ensp; 功能運行要跨欄(){ </br>
+				&ensp; &ensp; move(); &ensp; 移動(); </br>
+				&ensp; &ensp; move(); &ensp; 移動(); </br>
+				&ensp; &ensp; move(); &ensp; 移動(); </br>
+			} </br>
+			</br>
+			/* </br>
+			* This function has karel jump over a &ensp; 這個函數有卡雷爾跳過去一 </br>
+			* hurdle that is one row high. &ensp; 障礙是一排高。 </br>
+			* Precondition: Karel is standing in front &ensp; 前提條件：卡雷爾站在前面 </br>
+			* of a hurdle, facing east. &ensp; 一道坎的，面向東方。 </br>
+			* Postcondition: Karel has just jumped over &ensp; 後置條件：卡雷爾剛剛躍過 </br>
+			* a hurdle, and is facing east. &ensp; 一個障礙，並面向東方。 </br>
+			*/ </br>
+			</br>
+			function jumpHurdle(){ &ensp; 函數跳轉跨欄(){ </br>
+				&ensp; &ensp; turnLeft(); &ensp; 左轉(); </br>
+				&ensp; &ensp; move(); &ensp; 移動(); </br>
+				&ensp; &ensp; turnRight(); &ensp; 右轉(); </br>
+				&ensp; &ensp; move(); &ensp; 移動(); </br>
+				&ensp; &ensp; turnRight(); &ensp; 右轉(); </br>
+				&ensp; &ensp; move(); &ensp; 移動(); </br>
+				&ensp; &ensp; turnLeft(); &ensp; 左轉(); </br>
+			} </br>
+			</br>
+			/* This function has karel turn right. &ensp; 這個函數有卡雷爾右轉。 */ </br>
+			function turnRight(){  &ensp; 功能右轉(){ </br>
+				&ensp; &ensp; turnLeft(); &ensp; 左轉(); </br>
+				&ensp; &ensp; turnLeft(); &ensp; 左轉(); </br>
+				&ensp; &ensp; turnLeft(); &ensp; 左轉(); </br>
+			}
+		</p>
+	</body>
+</html>
