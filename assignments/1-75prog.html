@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+		<title>Karel 1.75</title>
+		<link type="text/css" rel="stylesheet" href="karelStyle.css">
+	</head>
+	<body>
+		<h1>1.75 Staircase 樓梯<h1>
+		<h2>Objective 目標:</h2>
+		<p>
+		<p>
+			This program creates a staircase from the first spot all the way across the world for any sized world. </br>
+			這個程序從一路之隔的世界上第一個專為任何規模世界創建一個樓梯。 </br>
+			This program works, but its indentation is completely wrong. </br>
+			這個程序的工作原理，但其壓痕是完全錯誤的。</br>
+			Run the program first, so you know what it does and don't break it. </br>
+			第一次運行該程序，所以你知道它做什麼，不要打破它。			
+		</p>
+		<h2>Starting World and Ending World 世界開始和結束的世界 </h2>
+		<p>
+			<img src="../images/1-75Staircase.png"
+			alt="Result Image" title="Result Image">
+		</p>
+		<p>
+			function start(){  &ensp; 功能開始（）{ </br>
+			putBall() &ensp; 放球(); </br>
+			wwhile(frontIsClear()){ &ensp; 當(前方無障礙物()){ </br>
+			turnLeft(); &ensp; 左轉(); </br>
+			while (ballsPresent()) { ;&ensp; 而（球存在（）{ </br>
+			move(); &ensp; 移動(); </br>
+			} </br>
+			turnRight(); ;&ensp; 右轉（）; </br>
+			move(); &ensp; 移動(); </br>
+			createStep(); ;&ensp; 創建步驟（）;</br>
+			} </br>
+			} </br>
+			function createStep() { ;&ensp; 函數創建步驟（）{</br>
+			turnRight(); ;&ensp; 右轉（）; </br>
+			putBall(); &ensp; 放球(); </br>
+			while(frontIsClear()){ &ensp; 當(前方無障礙物()){ </br>
+			move(); &ensp; 移動(); </br>
+			putBall(); &ensp; 放球(); </br>
+			} </br>
+			turnLeft(); &ensp; 左轉(); </br>
+			} </br>
+		</p>
+	</body>
+</html>

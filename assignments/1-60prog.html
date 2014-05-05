@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+		<title>Karel 1.60</title>
+		<link type="text/css" rel="stylesheet" href="karelStyle.css">
+	</head>
+	<body>
+		<h1>1.60 Lay Row of Tennis Balls 打好網球的行<h1>
+		<h2>Objective 目標:</h2>
+		<p>
+		<p>
+			Follow the yellow ball road! Simple. 
+			While Karel is on top of a ball, 
+			Karel should move once. At the end 
+			of the program, Karel will have reached 
+			the end of the road and stop. 
+			This must work for any length road (even 0). 
+			You can assume that the road will end 
+			before Karel will run into a wall.</br>
+			按照黃球道！簡單。雖然卡雷爾是在球的頂部，卡雷爾應該移動一次。
+			在節目的最後，卡雷爾將達到道路和停車的結束。
+			這必須適用於任何長度的道路（甚至為0）。你可以假設，
+			這條道路將結束之前，卡雷爾將碰壁。
+			Write a program to lay a row of tennis balls across first street. 
+			Make sure to test your program on multiple worlds. </br>
+			編寫一個程序，橫跨第一街打下一行網球的。一定要測試你對多個世界計劃。
+		</p>			
+		</p>
+		<h2>Starting World and Ending World 世界開始和結束的世界 </h2>
+		<p>
+			<img src="../images/1-60LayRow.png"
+			alt="Result Image" title="Result Image">
+		</p>
+		<h2>While Loops “當…”的迴圈 </h2>
+		<p>
+		    while (CONDITION) { &ensp; 當 (條件) { </br>
+			&ensp; &ensp; // Code that will run while the CONDITION is true. </br> 
+			&ensp; &ensp; // Once the CONDITION is no longer true, </br>
+			&ensp; &ensp; // it will stop. </br>
+			&ensp; &ensp; // 當該條件為正確時，將會執行的程式碼 </br>
+		    &ensp; &ensp; // 一旦該條件不再正確時 </br>
+		    &ensp; &ensp; // 此程式碼將會停止 </br>
+			} 
+		</p>
+		<p>
+			/* This moves Karel to a wall */ </br>
+			/* 這使卡羅爾移向一面牆*/ </br>
+			while(frontIsClear()){ &ensp; 當(前方無障礙物()){ </br>
+			&ensp; &ensp; move(); &ensp; 移動(); </br>
+			} 
+		</p>
+		<h2> Conditions 條件: </h2>
+		<p>
+		    frontIsClear() </br>
+			前方無障礙物() </br>
+			leftIsClear() </br>
+			左方無障礙物() </br>
+			rightIsClear() </br>
+			右方無障礙物()
+		</p>
+		<p>
+			frontIsBlocked() </br>
+			前方有障礙物() </br>
+			leftIsBlocked() </br>
+			左方有障礙物() </br>
+			rightIsBlocked() </br>
+			右方有障礙物()
+		</p>
+		<p>
+			facingNorth() </br>
+			面向北方() </br>
+			facingSouth() </br>
+			面向南方() </br>
+			facingEast() </br>
+			面向東方() </br>
+			facingWest() </br>
+			面向西方()
+		</p>
+		<p>
+		    notFacingNorth() </br> 
+			不面向北方() </br>
+			notFacingSouth() </br> 
+			不面向南方() </br>
+			notFacingEast() </br> 
+			不面向東方() </br>
+			notFacingWest() </br> 
+			不面向西方() 
+		</p>
+		<p>
+		    ballsPresent() </br>
+			有球() </br>
+			noBallsPresent() </br>
+			沒有球 ()
+		</p>
+	</body>
+</html>
