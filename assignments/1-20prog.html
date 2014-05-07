@@ -6,15 +6,15 @@
 		<link type="text/css" rel="stylesheet" href="karelStyle.css">
 	</head>
 	<body>
-		<h1>1.20 Pancakes 煎餅<h1>
+		<h1>1.20 Pancakes 煎餅</h1>
 		<h2>Objective 目標:</h2>
 		<p>
 			Karel is the waiter. He needs to deliver a stack of pancakes 
 			to the guests on the 2nd, 4th, and 6th avenue. 
-			Each stack of pancakes should have three pancakes. </br>
-			卡雷爾是服務員。他在送一疊煎餅給客人2號，第4和第6大道。煎餅的每個堆棧應該有三個煎餅。 </br>
+			Each stack of pancakes should have three pancakes. <br/>
+			卡雷爾是服務員。他在送一疊煎餅給客人2號，第4和第6大道。煎餅的每個堆棧應該有三個煎餅。 <br/>
 			Create a function called makePancakes() to help karel 
-			solve this problem. The world should end up exactly as shown here. </br>
+			solve this problem. The world should end up exactly as shown here. <br/>
 			創建一個名為做煎餅（）的函數來幫助卡雷爾解決這個問題。世界應該結束了完全相同，如下所示。
 		</p>
 		<h2>Starting World and Ending World 世界開始和結束的世界 </h2>
@@ -24,52 +24,52 @@
 		</p>
 		<h2>Karel's Commands 卡羅爾的指令 </h2>
 		<p>
-			&ensp;&ensp; move(); &ensp; 移動(); </br>
-			&ensp;&ensp; turnLeft(); &ensp; 左轉(); </br>
-			&ensp;&ensp; putBall(); &ensp; 放球(); </br>
-			&ensp;&ensp; takeBall(); &ensp; 拿球(); </br>
+			&ensp;&ensp; move(); &ensp; 移動(); <br/>
+			&ensp;&ensp; turnLeft(); &ensp; 左轉(); <br/>
+			&ensp;&ensp; putBall(); &ensp; 放球(); <br/>
+			&ensp;&ensp; takeBall(); &ensp; 拿球(); <br/>
 		</p>
 		<p>
-			"Defining a function" is &ensp; 定義功能” </br>
-			teaching karel *how* to do it &ensp; 教學卡雷爾**怎麼做  </br>
-			</br>
-			"Calling a function" is &ensp; “調用函數”的  </br>
-			saying "hey karel, do it!" &ensp; 說“哎卡雷爾，做到這一點！” </br>
-			</br>
-			You only "define" a function once. &ensp; 只有你“定義”功能一次。  </br>
-			Then you can "call" it many times &ensp; 然後你可以“呼叫”了很多次 </br>
+			"Defining a function" is &ensp; 定義功能” <br/>
+			teaching karel *how* to do it &ensp; 教學卡雷爾**怎麼做  <br/>
+			<br/>
+			"Calling a function" is &ensp; “調用函數”的  <br/>
+			saying "hey karel, do it!" &ensp; 說“哎卡雷爾，做到這一點！” <br/>
+			<br/>
+			You only "define" a function once. &ensp; 只有你“定義”功能一次。  <br/>
+			Then you can "call" it many times &ensp; 然後你可以“呼叫”了很多次 <br/>
 		</p>
 		<p>
-			// "Defining the function" &ensp; 定義函數  </br>
-			function turnRight() { &ensp; 功能右轉（）{ </br>
-			&ensp;&ensp; turnLeft(); &ensp; 左轉();</br>
-			&ensp;&ensp; turnLeft(); &ensp; 左轉();</br>
-			&ensp;&ensp; turnLeft(); &ensp; 左轉();</br> 
-			} </br> 
+			// "Defining the function" &ensp; 定義函數  <br/>
+			function turnRight() { &ensp; 功能右轉（）{ <br/>
+			&ensp;&ensp; turnLeft(); &ensp; 左轉();<br/>
+			&ensp;&ensp; turnLeft(); &ensp; 左轉();<br/>
+			&ensp;&ensp; turnLeft(); &ensp; 左轉();<br/> 
+			} <br/> 
 		</p>
 		<p>
-			// "Calling a function" &ensp; 調用函數” </br>
-			turnRight();  &ensp; 右轉（）; </br>
-			turnAround(); &ensp; 轉身（）; </br>
+			// "Calling a function" &ensp; 調用函數” <br/>
+			turnRight();  &ensp; 右轉（）; <br/>
+			turnAround(); &ensp; 轉身（）; <br/>
 		</p>
 		<p>
-			// "Defining a function" &ensp; “定義的函數” </br>
-			</br>
-			function turnAround(){ &ensp; 功能掉頭（）{ </br>
-			&ensp;&ensp; turnLeft(); &ensp; 左轉();</br>
-			&ensp;&ensp; turnLeft(); &ensp; 左轉();</br>
-			}</br>
-			</br>
-			// "Defining a function" &ensp; “定義的函數” </br>
-			</br>
-			function moveTwice(){ &ensp; 功能移動兩次（）{ </br>
-			&ensp;&ensp; move(); &ensp; 移動(); </br>
-			&ensp;&ensp; move(); &ensp; 移動(); </br>
-			}</br>
-			</br>
-			// "Calling a function" &ensp; 調用函數” </br>
-			turnRight();  &ensp; 右轉（）; </br>
-			turnAround(); &ensp; 轉身（）; </br>
+			// "Defining a function" &ensp; “定義的函數” <br/>
+			<br/>
+			function turnAround(){ &ensp; 功能掉頭（）{ <br/>
+			&ensp;&ensp; turnLeft(); &ensp; 左轉();<br/>
+			&ensp;&ensp; turnLeft(); &ensp; 左轉();<br/>
+			}<br/>
+			<br/>
+			// "Defining a function" &ensp; “定義的函數” <br/>
+			<br/>
+			function moveTwice(){ &ensp; 功能移動兩次（）{ <br/>
+			&ensp;&ensp; move(); &ensp; 移動(); <br/>
+			&ensp;&ensp; move(); &ensp; 移動(); <br/>
+			}<br/>
+			<br/>
+			// "Calling a function" &ensp; 調用函數” <br/>
+			turnRight();  &ensp; 右轉（）; <br/>
+			turnAround(); &ensp; 轉身（）; <br/>
 		</p>
 	</body>
 </html>

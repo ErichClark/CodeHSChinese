@@ -6,50 +6,50 @@
 		<link type="text/css" rel="stylesheet" href="lessonStyle.css">
 	</head>
 	<body>
-		<h1>Example 例子 1.73</br>
+		<h1>Example 例子 1.73<br/>
 			Dance and Clean Karel 舞蹈和清潔卡雷爾</h1>
 		<p>This is an example that we did in the video. 
 			You are encouraged to play around with it, to see how it all works. 
-			When you are done, click the arrow to go to the next problem.</br>
+			When you are done, click the arrow to go to the next problem.<br/>
 			這是我們在視頻中做了一個榜樣。我們鼓勵你玩它，看看它是如何工作的。當你完成後，單擊箭頭進入下一個問題。</p>
 		<h2>Starting World and Ending World 世界開始和結束的世界 </h2>
 		<p><img src="../images/1-73DanceAndClean.png" alt="Result Image" title="Result Image"></p>
 		<h2>Example Code 示例代碼 </h2>
 		<p>
-			/* This program has karel move across first street, and  &ensp; 這個程序有卡雷爾移動跨越第一條街道，並  </br>
-			&ensp;* if he encounters a stack of tennis balls, he picks them &ensp; 如果他遇到一個堆棧網球的，他拿起他們  </br>
-			&ensp;* all up, and then spins around. This is the code we &ensp; 結束了在視頻，但如果你仔細  </br>
-			&ensp;* ended up with in the video, but if you take a close &ensp; 結束了在視頻，但如果你仔細  </br>
-			&ensp;* look, you will see that there is a repeated section  &ensp; 看看，你會看到有一個重複的部分  </br>
-			&ensp;* of code. Could you make that its own function? */ &ensp; 的代碼。你可以把它自己的功能？ </br>
-			</br>
-			function start(){ &ensp; 函數的開始(){ </br>
-			&ensp;&ensp;while(frontIsClear()){ &ensp; 而（前面是明確的()){ </br>
-			&ensp;&ensp;&ensp;&ensp;cleanUp();  &ensp; 淨化(); </br>
-			&ensp;&ensp;&ensp;&ensp;move(); &ensp; 移動(); </br>
-			&ensp;&ensp;} </br>
-			</br>
-			&ensp;&ensp;cleanUp(); &ensp; 淨化(); </br>
-			</br>
-			}</br>
-			</br>
-			/* This function has karel dance, or spin around &ensp; 這個函數有卡雷爾舞蹈，或左右旋轉  </br>
-			&ensp;* by turning left four times. */ &ensp; 由左轉四倍。 </br>
-			</br>
-			function dance(){  &ensp; 功能舞（））{ </br>
-			&ensp;&ensp;for(var i = 0; i < 4; i++){ &ensp; 對於（可變 i = 0; i < 4; i++){ </br>
-			&ensp;&ensp;&ensp;&ensp;turnLeft(); &ensp; 頁轉到左(); </br>
-			&ensp;&ensp;} </br>
-			} </br>
-			</br>
-			function cleanUp(){ &ensp; 清理功能(){ </br>
-			</br>
-			&ensp;&ensp;if(ballsPresent()){ &ensp; 如果（球存在）</br>
-			&ensp;&ensp;&ensp;&ensp;while(ballsPresent()){ &ensp; 而（球存在（））{ </br>
-			&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;takeBall(); &ensp; 取球(); </br>
-			&ensp;&ensp;&ensp;&ensp;}</br>
-			&ensp;&ensp;dance(); &ensp; 舞蹈（）; </br>
-			&ensp;&ensp;} </br>
+			/* This program has karel move across first street, and  &ensp; 這個程序有卡雷爾移動跨越第一條街道，並  <br/>
+			&ensp;* if he encounters a stack of tennis balls, he picks them &ensp; 如果他遇到一個堆棧網球的，他拿起他們  <br/>
+			&ensp;* all up, and then spins around. This is the code we &ensp; 結束了在視頻，但如果你仔細  <br/>
+			&ensp;* ended up with in the video, but if you take a close &ensp; 結束了在視頻，但如果你仔細  <br/>
+			&ensp;* look, you will see that there is a repeated section  &ensp; 看看，你會看到有一個重複的部分  <br/>
+			&ensp;* of code. Could you make that its own function? */ &ensp; 的代碼。你可以把它自己的功能？ <br/>
+			<br/>
+			function start(){ &ensp; 函數的開始(){ <br/>
+			&ensp;&ensp;while(frontIsClear()){ &ensp; 而（前面是明確的()){ <br/>
+			&ensp;&ensp;&ensp;&ensp;cleanUp();  &ensp; 淨化(); <br/>
+			&ensp;&ensp;&ensp;&ensp;move(); &ensp; 移動(); <br/>
+			&ensp;&ensp;} <br/>
+			<br/>
+			&ensp;&ensp;cleanUp(); &ensp; 淨化(); <br/>
+			<br/>
+			}<br/>
+			<br/>
+			/* This function has karel dance, or spin around &ensp; 這個函數有卡雷爾舞蹈，或左右旋轉  <br/>
+			&ensp;* by turning left four times. */ &ensp; 由左轉四倍。 <br/>
+			<br/>
+			function dance(){  &ensp; 功能舞（））{ <br/>
+			&ensp;&ensp;for(var i = 0; i &lt; 4; i++){ &ensp; 對於（可變 i = 0; i &lt; 4; i++){ <br/>
+			&ensp;&ensp;&ensp;&ensp;turnLeft(); &ensp; 頁轉到左(); <br/>
+			&ensp;&ensp;} <br/>
+			} <br/>
+			<br/>
+			function cleanUp(){ &ensp; 清理功能(){ <br/>
+			<br/>
+			&ensp;&ensp;if(ballsPresent()){ &ensp; 如果（球存在）<br/>
+			&ensp;&ensp;&ensp;&ensp;while(ballsPresent()){ &ensp; 而（球存在（））{ <br/>
+			&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;takeBall(); &ensp; 取球(); <br/>
+			&ensp;&ensp;&ensp;&ensp;}<br/>
+			&ensp;&ensp;dance(); &ensp; 舞蹈（）; <br/>
+			&ensp;&ensp;} <br/>
 			}
 		</p>
 	</body>

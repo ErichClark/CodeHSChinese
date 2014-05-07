@@ -6,19 +6,17 @@
 		<link type="text/css" rel="stylesheet" href="karelStyle.css">
 	</head>
 	<body>
-		<h1>1.65 Random Hurdles 隨機跨欄<h1>
+		<h1>1.65 Random Hurdles 隨機跨欄</h1>
 		<h2>Objective 目標:</h2>
-		<p>
 		<p>
 			Write a program that has Karel run to the other side of first street, 
 			jumping over all of the hurdles. However, the hurdles can be in random 
-			locations. The world is fourteen avenues long. </br>
+			locations. The world is fourteen avenues long. <br/>
 			編寫一個程序，有卡雷爾運行的第一條街道的另一邊，跳過所有的障礙。然而，障礙可以是在隨機的位置。
-			世界是14大道長。</br> 
-			You must write a function named jumpHurdle() as part of your solution.</br>
+			世界是14大道長。<br/> 
+			You must write a function named jumpHurdle() as part of your solution.<br/>
 			你必須寫一個函數命名的跨欄跳（）作為解決方案的一部分。
 		</p>			
-		</p>
 		<h2>Starting World and Ending World 世界開始和結束的世界 </h2>
 		<p>
 			<img src="../images/1-65RandomHurdles.png"
@@ -26,63 +24,63 @@
 		</p>
 		<h2>While Loops “當…”的迴圈 </h2>
 		<p>
-		    while (CONDITION) { &ensp; 當 (條件) { </br>
-			&ensp; &ensp; // Code that will run while the CONDITION is true. </br> 
-			&ensp; &ensp; // Once the CONDITION is no longer true, </br>
-			&ensp; &ensp; // it will stop. </br>
-			&ensp; &ensp; // 當該條件為正確時，將會執行的程式碼 </br>
-		    &ensp; &ensp; // 一旦該條件不再正確時 </br>
-		    &ensp; &ensp; // 此程式碼將會停止 </br>
+		    while (CONDITION) { &ensp; 當 (條件) { <br/>
+			&ensp; &ensp; // Code that will run while the CONDITION is true. <br/> 
+			&ensp; &ensp; // Once the CONDITION is no longer true, <br/>
+			&ensp; &ensp; // it will stop. <br/>
+			&ensp; &ensp; // 當該條件為正確時，將會執行的程式碼 <br/>
+		    &ensp; &ensp; // 一旦該條件不再正確時 <br/>
+		    &ensp; &ensp; // 此程式碼將會停止 <br/>
 			} 
 		</p>
 		<p>
-			/* This moves Karel to a wall */ </br>
-			/* 這使卡羅爾移向一面牆*/ </br>
-			while(frontIsClear()){ &ensp; 當(前方無障礙物()){ </br>
-			&ensp; &ensp; move(); &ensp; 移動(); </br>
+			/* This moves Karel to a wall */ <br/>
+			/* 這使卡羅爾移向一面牆*/ <br/>
+			while(frontIsClear()){ &ensp; 當(前方無障礙物()){ <br/>
+			&ensp; &ensp; move(); &ensp; 移動(); <br/>
 			} 
 		</p>
 		<h2> Conditions 條件: </h2>
 		<p>
-		    frontIsClear() </br>
-			前方無障礙物() </br>
-			leftIsClear() </br>
-			左方無障礙物() </br>
-			rightIsClear() </br>
+		    frontIsClear() <br/>
+			前方無障礙物() <br/>
+			leftIsClear() <br/>
+			左方無障礙物() <br/>
+			rightIsClear() <br/>
 			右方無障礙物()
 		</p>
 		<p>
-			frontIsBlocked() </br>
-			前方有障礙物() </br>
-			leftIsBlocked() </br>
-			左方有障礙物() </br>
-			rightIsBlocked() </br>
+			frontIsBlocked() <br/>
+			前方有障礙物() <br/>
+			leftIsBlocked() <br/>
+			左方有障礙物() <br/>
+			rightIsBlocked() <br/>
 			右方有障礙物()
 		</p>
 		<p>
-			facingNorth() </br>
-			面向北方() </br>
-			facingSouth() </br>
-			面向南方() </br>
-			facingEast() </br>
-			面向東方() </br>
-			facingWest() </br>
+			facingNorth() <br/>
+			面向北方() <br/>
+			facingSouth() <br/>
+			面向南方() <br/>
+			facingEast() <br/>
+			面向東方() <br/>
+			facingWest() <br/>
 			面向西方()
 		</p>
 		<p>
-		    notFacingNorth() </br> 
-			不面向北方() </br>
-			notFacingSouth() </br> 
-			不面向南方() </br>
-			notFacingEast() </br> 
-			不面向東方() </br>
-			notFacingWest() </br> 
+		    notFacingNorth() <br/> 
+			不面向北方() <br/>
+			notFacingSouth() <br/> 
+			不面向南方() <br/>
+			notFacingEast() <br/> 
+			不面向東方() <br/>
+			notFacingWest() <br/> 
 			不面向西方() 
 		</p>
 		<p>
-		    ballsPresent() </br>
-			有球() </br>
-			noBallsPresent() </br>
+		    ballsPresent() <br/>
+			有球() <br/>
+			noBallsPresent() <br/>
 			沒有球 ()
 		</p>
 	</body>
