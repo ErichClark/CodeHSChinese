@@ -6,46 +6,46 @@
 		<link type="text/css" rel="stylesheet" href="lessonStyle.css">
 	</head>
 	<body>
-		<h1>Example 例子 1.70<br/>
+		<h1>Example 例子 1.70<br>
 			Climbing Karel 登山卡雷爾</h1>
 		<p>This is an example that we did in the video. 
 			You are encouraged to play around with it, to see how it all works. 
-			When you are done, click the arrow to go to the next problem.<br/>
+			When you are done, click the arrow to go to the next problem.<br>
 			這是我們在視頻中做了一個榜樣。我們鼓勵你玩它，看看它是如何工作的。當你完成後，單擊箭頭進入下一個問題。</p>
 		<h2>Starting World and Ending World 世界開始和結束的世界 </h2>
 		<p><img src="../images/1-70ClimbingKarel.png" alt="Result Image" title="Result Image"></p>
 		<h2>Example Code 示例代碼 </h2>
 		<p>
-			/* Karel needs to find the open slot and &ensp; 卡雷爾需要找到空閒插槽和  <br/>
-			&ensp;* climb up 7 rows. We cannot depend on the  &ensp; 爬上7行。我們不能依賴於 <br/>
-			&ensp;* number of columns. */ &ensp; 列數。 <br/>
-			<br/>
-			function start(){ &ensp; 函數的開始(){ <br/>
-			&ensp;&ensp; for(var i = 0; i &lt; 7; i++){ &ensp; 對於（可變 i = 0; i &lt; 7; i++){ <br/>
-			&ensp;&ensp;&ensp;&ensp; moveUp(); &ensp; 提前（）; <br/>
-			&ensp;&ensp;} <br/>
-			}<br/>
-			<br/>
-			/* Karel will start at the left side of a &ensp; 卡雷爾將開始的左側  <br/>
-			&ensp;* row, keep moving across the row until &ensp; 排，保持在該行移動，直到  <br/>
-			&ensp;* there is an open spot, then go through &ensp; 有一個空位，然後通過  <br/>
-			&ensp;* the slot, and return to the start of &ensp; 插槽，並返回到開始  <br/>
-			&ensp;* the row. */ &ensp; 該行。 <br/>
-			<br/>
-			function moveUp(){ &ensp; 功能上移（）{ <br/>
-			&ensp;&ensp; while(leftIsBlocked()){ &ensp; 而（左被阻止（））{ <br/>
-			&ensp;&ensp;&ensp;&ensp; move(); &ensp; 移動（）; <br/>
-			&ensp;&ensp;} <br/>
-			&ensp;&ensp; turnLeft(); &ensp; 向左轉(); <br/>
-			&ensp;&ensp; move(); &ensp; 移動（）; <br/>
-			&ensp;&ensp; turnLeft(); &ensp; 向左轉(); <br/>
-			&ensp;&ensp; moveToWall(); &ensp; 移動到牆（）; <br/>
-			&ensp;&ensp; turnAround(); &ensp; 運轉(); <br/>
-			} <br/>
-			<br/>
-			function moveToWall()){ &ensp; 功能（移動到牆（））{ <br/>
-			&ensp;&ensp;while(front IsClear()){ &ensp; 而（前面是明確的（））{ <br/>
-			&ensp;&ensp;&ensp;&ensp; move(); &ensp; 移動（）; <br/>
+			/* Karel needs to find the open slot and &ensp; 卡雷爾需要找到空閒插槽和  <br>
+			&ensp;* climb up 7 rows. We cannot depend on the  &ensp; 爬上7行。我們不能依賴於 <br>
+			&ensp;* number of columns. */ &ensp; 列數。 <br>
+			<br>
+			function start(){ &ensp; 函數的開始(){ <br>
+			&ensp;&ensp; for(var i = 0; i &lt; 7; i++){ &ensp; 對於（可變 i = 0; i &lt; 7; i++){ <br>
+			&ensp;&ensp;&ensp;&ensp; moveUp(); &ensp; 提前（）; <br>
+			&ensp;&ensp;} <br>
+			}<br>
+			<br>
+			/* Karel will start at the left side of a &ensp; 卡雷爾將開始的左側  <br>
+			&ensp;* row, keep moving across the row until &ensp; 排，保持在該行移動，直到  <br>
+			&ensp;* there is an open spot, then go through &ensp; 有一個空位，然後通過  <br>
+			&ensp;* the slot, and return to the start of &ensp; 插槽，並返回到開始  <br>
+			&ensp;* the row. */ &ensp; 該行。 <br>
+			<br>
+			function moveUp(){ &ensp; 功能上移（）{ <br>
+			&ensp;&ensp; while(leftIsBlocked()){ &ensp; 而（左被阻止（））{ <br>
+			&ensp;&ensp;&ensp;&ensp; move(); &ensp; 移動（）; <br>
+			&ensp;&ensp;} <br>
+			&ensp;&ensp; turnLeft(); &ensp; 向左轉(); <br>
+			&ensp;&ensp; move(); &ensp; 移動（）; <br>
+			&ensp;&ensp; turnLeft(); &ensp; 向左轉(); <br>
+			&ensp;&ensp; moveToWall(); &ensp; 移動到牆（）; <br>
+			&ensp;&ensp; turnAround(); &ensp; 運轉(); <br>
+			} <br>
+			<br>
+			function moveToWall()){ &ensp; 功能（移動到牆（））{ <br>
+			&ensp;&ensp;while(front IsClear()){ &ensp; 而（前面是明確的（））{ <br>
+			&ensp;&ensp;&ensp;&ensp; move(); &ensp; 移動（）; <br>
 			}
 		</p>
 	</body>
