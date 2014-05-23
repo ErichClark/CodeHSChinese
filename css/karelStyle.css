@@ -1,20 +1,62 @@
 body {
 	font-family: Verdana, Geneva, Arial, sans-serif;
 	font-size: medium;
+	line-height: 1.5em;
+	margin-left: 100px;
+	margin-top: 50px;
 }
 
 h1 {
+	margin-left: 5px;
 	font-size: 150%;
 }
 
 h2 {
+	margin-left: 5px;
 	font-size: 125%;
 }
 
 h3 {
+	margin-left: 5px;
 	font-size: 115%;
 }
 
 em {
 	font-weight: bold;
+	font-size: large;
+	line-height: 2em;
+}
+
+.objective {
+	margin-left: 5px;
+	width: 770px;
+	border-style: dotted;
+	border-color: blue;
+	border-width: 3px;
+	border-radius: 1em;
+	padding: 15px;
+}
+
+.hints {
+	margin-left: 5px;
+	width: 700px;
+	border-color: green;
+	border-width: 3px;
+	border-style: dotted;
+	border-radius: 1em;
+	padding: 15px;
+	padding-left: 90px;
+	background-image: url(../images/bone.gif);
+	background-repeat: no-repeat;
+	background-position: top-left;
+}
+
+.quiz {
+	margin-left: 5px;
+	width: 770px;
+	border-style: dotted;
+	border-color: blue;
+	border-width: 3px;
+	border-radius: 1em;
+	padding: 15px;
 }
