@@ -4,11 +4,13 @@ body {
 	line-height: 1.5em;
 	margin-left: 100px;
 	margin-top: 50px;
+	margin-bottom: 100px;
 }
 
 h1 {
 	margin-left: 5px;
 	font-size: 150%;
+	line-height: 1.6em;
 }
 
 h2 {
@@ -27,7 +29,7 @@ em {
 	line-height: 2em;
 }
 
-.objective {
+.objective, .hints {
 	margin-left: 5px;
 	width: 770px;
 	border-style: dotted;
@@ -38,17 +40,7 @@ em {
 }
 
 .hints {
-	margin-left: 5px;
-	width: 700px;
 	border-color: green;
-	border-width: 3px;
-	border-style: dotted;
-	border-radius: 1em;
-	padding: 15px;
-	padding-left: 90px;
-	background-image: url(../images/bone.gif);
-	background-repeat: no-repeat;
-	background-position: top-left;
 }
 
 .quiz {
@@ -60,3 +52,54 @@ em {
 	border-radius: 1em;
 	padding: 15px;
 }
+
+
+@media screen and (min-device-width: 481px) {
+	#guarantee {
+		margin-right: 250px;
+	}
+}
+
+@media screen and (max-device-width: 480px) {
+	#guarantee {
+		margin-right: 30px;
+		margin-left: 30px;
+	}
+}
+
+.fa-paw{
+	color: #5E2612;
+}
+
+.fa-book{
+	color: #a7aeb6;
+}
+
+.fa-check-square-o {
+	color: #8cc63e;
+}
+
+.fa-home {
+	color: #00a79d;
+}
+
+.fa-pencil {
+	color: #fbaf3f;
+}
+
+.fa-file-text-o {
+	color: #de5844;
+}
+
+.fa-video-camera {
+	color: #27a9e1;
+}
+
+.fa-star {
+	color: #9e1e62;
+}
+
+.fa-certificate {
+	color: #ffdd17;
+}
+
