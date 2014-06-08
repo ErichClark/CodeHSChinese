@@ -32,27 +32,19 @@ em {
 .objective, .hints {
 	margin-left: 5px;
 	width: 770px;
-	border-style: dotted;
-	border-color: blue;
-	border-width: 3px;
-	border-radius: 1em;
 	padding: 15px;
-}
-
-.hints {
-	border-color: green;
 }
 
 .quiz {
 	margin-left: 5px;
 	width: 770px;
-	border-style: dotted;
-	border-color: blue;
-	border-width: 3px;
-	border-radius: 1em;
 	padding: 15px;
 }
 
+.lesson {
+	font-style: italic;
+	font-weight: bold;
+}
 
 @media screen and (min-device-width: 481px) {
 	#guarantee {
