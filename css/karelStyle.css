@@ -95,3 +95,12 @@ em {
 	color: #ffdd17;
 }
 
+a:link {
+	color: DimGray;
+	text-decoration: none;
+}
+
+a:visited {
+	color: green;
+	text-decoration: none;
+}
