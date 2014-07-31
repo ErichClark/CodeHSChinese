@@ -1,0 +1,1 @@
+function start(){ &ensp; 函數的開始（）{ <br>

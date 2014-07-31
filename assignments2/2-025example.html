@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Example 例子 2.25</title>
+		<link type="text/css" rel="stylesheet" href="../css/karelStyle.css"
+			media="screen and (min-width: 481px)">
+		<link type="text/\css" rel="stylesheet" href="../css/karelStyle.css"
+			media="screen and (max-width: 480px)">
+		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<h1><i class="fa fa-file-text-o fa-3x"></i> Example 例子 2.25<br>
+			Example: 8 Ball 例如：八球</h1>
+		<p class="objective">This is an example that we did in the video. 
+			You are encouraged to play around with it, to see how it all works. 
+			When you are done, click the arrow to go to the next problem.<br>
+			這是我們在視頻中做了一個榜樣。我們鼓勵你玩它，看看它是如何工作的。當你完成後，單擊箭頭進入下一個問題。</p>
+		<h2>Goal Output 目標輸出 </h2>
+		<p><img src="2-025example.png" alt="Result Image" title="Result Image"></p>
+		<h2>Example Code 示例代碼 </h2>
+		<p class="hints">
+			// This program will draw an 8 ball &ensp; //此程序將繪製一個8球 <br>
+			// centered on the screen. The circle &ensp; //在屏幕上居中。圓 <br>
+			// should be black with radius 100, and &ensp; //應該是黑色的，半徑100，和 <br>
+			// the "8" should be white in 50pt Arial &ensp; //“8”應該是白色的50點宋體 <br>
+			// font. &ensp; //字體。 <br>
+			function start(){ &ensp; 函數的開始（）{ <br>
+			&ensp;&ensp; var ball = new Circle(100); &ensp; 可變球=新圓（100）; <br>
+			&ensp;&ensp; var centerX = getWidth() / 2; &ensp; 可變中心X =得到寬度（）/2; <br>
+			&ensp;&ensp; var centerY = getHeight() / 2; &ensp; 可變中心Y = GET高度（）/2;<br>
+			&ensp;&ensp; ball.setPosition(centerX, centerY); &ensp; 球。設定位置（中心X，中心Y）; <br>
+			&ensp;&ensp; add(ball); &ensp; 添加（球）; <br>
+			<br>
+			&ensp;&ensp; var number = new Text("8"); &ensp; 可變數目=新文本（“8”）; <br>
+			&ensp;&ensp; number.setFont("50pt Arial"); &ensp; 數。設置字體（“50點宋體”）; <br>
+			&ensp;&ensp; number.setColor(Color.white); &ensp; 數。設置顏色（顏色。白）; <br>
+			&ensp;&ensp; number.setPosition(centerX - number.getWidth()/2, centerY + number.getWidth()/2); &ensp; 數。設定位置（。中心x - 數得到寬（）/2，中心Y +數量得到寬度（）/2）; <br>
+			&ensp;&ensp; add(number); &ensp; 添加（數量）; <br>
+			}
+		</p>
+		<p><i class="fa fa-home fa-2x"></i><a href="../basicJavaHome.html"> Return to Graphics Home Page 返回顯卡首頁 </a></p>
+	</body>
+</html>

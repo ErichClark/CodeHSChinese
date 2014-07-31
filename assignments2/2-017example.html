@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Example 例子 2.17</title>
+		<link type="text/css" rel="stylesheet" href="../css/karelStyle.css"
+			media="screen and (min-width: 481px)">
+		<link type="text/css" rel="stylesheet" href="../css/karelStyle.css"
+			media="screen and (max-width: 480px)">
+		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<h1><i class="fa fa-file-text-o fa-3x"></i> Example 例子 2.17<br>
+			Example: Dividing Up Groups 例如：拆分组</h1>
+		<p class="objective">This is an example that we did in the video. 
+			You are encouraged to play around with it, to see how it all works. 
+			When you are done, click the arrow to go to the next problem.<br>
+			這是我們在視頻中做了一個榜樣。我們鼓勵你玩它，看看它是如何工作的。當你完成後，單擊箭頭進入下一個問題。</p>
+		<h2>Example Code 示例代碼 </h2>
+		<p class="hints">
+			/* This program helps us divide a large number &ensp; /*這個程序可以幫助我們劃分了大量  <br>
+			* of people into groups. We tell it how many &ensp; *人成團。我們告訴它有多少  <br>
+			* total people there are, and how many people &ensp; *總讓人有，又有多少人  <br>
+			* there are per group, and we figure out &ensp; *有元組，我們計算出  <br>
+			* how many groups there are, and how many &ensp; *多少組也有，有多少  <br>
+			* are left over. */ &ensp; *被遺留下來的。 */  <br>
+			function start(){ &ensp; 函數的開始（）{ <br>
+			&ensp;&ensp; var people = readInt("Num people: "); &ensp; 變種人=讀整型（“數字人”）;  <br>
+			&ensp;&ensp; var peoplePerGroup = readInt("People per group: "); &ensp; 變種人每小組=讀整型（“每組人物：”）;  <br>
+			<br>
+			&ensp;&ensp; // We must use Math.floor to make sure the result &ensp; //我們要用數學。地板，以確保結果  <br>
+			&ensp;&ensp; // is an integer &ensp; //為整數  <br>
+			&ensp;&ensp; var groups = Math.floor(people / peoplePerGroup); &ensp; 變種組=數學。地板（人/人每組）;  <br>
+			<br>
+			&ensp;&ensp; // The % operator helps us find the remainder &ensp; //％運算符可以幫助我們找到其餘  <br>
+			&ensp;&ensp; var peopleLeft = people % peoplePerGroup; &ensp; 變種人左=人％的人每小組;  <br>
+			<br>
+			&ensp;&ensp; println("There are " + groups + " groups " + &ensp; 打印線（“有”+ 組+“組”+  <br>
+			&ensp;&ensp; "with " + peopleLeft + " left over."); &ensp; “與”人+左+“遺留下來的。”）;  <br>
+			}
+		</p>
+		<p><i class="fa fa-home fa-2x"></i><a href="../basicJavaHome.html"> Return to Graphics Home Page 返回顯卡首頁 </a></p>
+	</body>
+</html>
