@@ -108,3 +108,9 @@ a:visited {
 	color: green;
 	text-decoration: none;
 }
+
+.tab { margin-left: 40px; }
+
+.tab2 { margin-left: 80px; }
+
+.tab3 { margin-left: 120px; }
