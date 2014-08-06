@@ -17,20 +17,37 @@
 			When you are done, click the arrow to go to the next problem.<br>
 			這是我們在視頻中做了一個榜樣。我們鼓勵你玩它，看看它是如何工作的。當你完成後，單擊箭頭進入下一個問題。</p>
 		<h2>Example Code 示例代碼 </h2>
-		<p class="hints">
-			// This constant represents our currency conversion rate &ensp; //這個常數代表了我們的貨幣轉換率  <br>
-			var DOLLARS_TO_POUNDS = 0.6462; &ensp; 變種美元兌英鎊=0.6462;  <br>
-			<br>
-			// This program will convert dollars to pounds &ensp; //此程序將美元轉換為英鎊  <br>
-			function start(){ &ensp; 函數的開始（）{ <br>
-			&ensp;&ensp; println("This program converts USD to GBP."); &ensp; 打印線（“本程序轉換成美元，以英鎊。”）;  <br>
-			&ensp;&ensp; var dollars = readFloat("USD: "); &ensp; 變種美元=讀浮動（“美元”）;  <br>
-			<br>
-			&ensp;&ensp; // This is how we can convert from dollars to pounds &ensp; //這是我們如何能夠從美元轉換為英鎊  <br>
-			&ensp;&ensp; var pounds = dollars * DOLLARS_TO_POUNDS; &ensp;  <br>
-			<br>
-			&ensp;&ensp; println("GBP: " + pounds); &ensp; 打印線（「英鎊：“+磅）;  <br>
-			}
+		<pre class="prettyprint">			
+// This constant represents our currency
+// conversion rate
+var DOLLARS_TO_POUNDS = 0.6462;
+
+// This program will convert dollars to pounds
+function start(){
+	println("This program converts USD to GBP.");
+	var dollars = readFloat("USD: ");
+	
+	// This is how we can convert from dollars
+	// to pounds
+	var pounds = dollars * DOLLARS_TO_POUNDS;
+	
+	println("GBP: " + pounds);
+}
+
+		
+//這個常數代表了我們的貨幣轉換率 
+變種美元兌英鎊=0.6462;  
+
+//此程序將美元轉換為英鎊 
+函數的開始（）{
+	打印線（“本程序轉換成美元，以英鎊。”）; 
+	變種美元=讀浮動（“美元”）; 
+		
+	//這是我們如何能夠從美元轉換為英鎊 
+	可變磅=美元*美元_至_英鎊; 
+		
+	打印線（“英鎊：”+磅）;  
+}
 		</p>
 		<p><i class="fa fa-home fa-2x"></i><a href="../basicJavaHome.html"> Return to Graphics Home Page 返回顯卡首頁 </a></p>
 	</body>

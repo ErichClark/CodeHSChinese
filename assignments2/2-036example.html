@@ -18,21 +18,36 @@
 			這是我們在視頻中做了一個榜樣。我們鼓勵你玩它，看看它是如何工作的。當你完成後，單擊箭頭進入下一個問題。</p>
 		
 		<h2>Example Code 示例代碼 </h2>
-		<p class="hints">
-			// Write a program to determine if you &ensp; //寫一個程序，以確定是否 <br>
-			// are wasting time. &ensp; //這是在浪費時間。 <br>
-			function start(){ &ensp; 函數的開始（）{ <br>
-			&ensp;&ensp; var onFacebook = readBoolean("Are you on Facebook? "); &ensp; 在臉書變量=讀布爾（“上臉書是你嗎？”）; <br>
-			&ensp;&ensp; var onEmail = readBoolean("Are you on eMail? "); &ensp; 在電子郵件=讀布爾變量（“你在收發電子郵件？”）; <br>
-			<br>
-			&ensp;&ensp; // This is true if one, or the other, &ensp; //這是真的，如果一個，或者其他的， <br>
-			&ensp;&ensp; // or both are true. &ensp; //或者兩者都是真實的。<br>
-			&ensp;&ensp; var isWastingTime =  &ensp; 風險價值是浪費時間= <br>
-			&ensp;&ensp; onFacebook || onEmail; &ensp; 在臉書| |關於電子郵件; <br>
-			<br>
-			&ensp;&ensp; println("Wasting time? " +  &ensp; 打印線（“浪費時間嗎？”+ <br>	
-			&ensp;&ensp; isWastingTime); &ensp; 是浪費時間）; <br>
-			}
+		<pre class="prettyprint">
+// Write a program to determine if you
+// are wasting time.
+function start(){
+	var onFacebook = readBoolean("Are you on Facebook? ");
+	var onEmail = readBoolean("Are you on eMail? ");
+	
+	// This is true if one, or the other, 
+	// or both are true.
+	var isWastingTime = 
+		onFacebook || onEmail;
+	
+	println("Wasting time? " + 			
+		isWastingTime);
+}		
+
+//寫一個程序，以確定是否 
+//這是在浪費時間。 
+函數的開始（）{ 
+	在臉書變量=讀布爾（“上臉書是你嗎？”）; 
+	在電子郵件變量=讀布爾（“你在電子郵件？ “）; 
+
+	//這是真的，如果一個，或者其他的， 
+	//或者兩者都是真實的。 
+	變量是在浪費時間=
+		上臉書||的電子郵件; 
+
+	打印線（“浪費時間嗎？”+
+		是浪費時間）; 
+}
 		</p>
 		<p><i class="fa fa-home fa-2x"></i><a href="../basicJavaHome.html"> Return to Graphics Home Page 返回顯卡首頁 </a></p>
 	</body>

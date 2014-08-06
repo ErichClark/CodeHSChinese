@@ -17,27 +17,46 @@
 			When you are done, click the arrow to go to the next problem.<br>
 			這是我們在視頻中做了一個榜樣。我們鼓勵你玩它，看看它是如何工作的。當你完成後，單擊箭頭進入下一個問題。</p>
 		<h2>Goal Output 目標輸出 </h2>
-		<p><img src="2-025example.png" alt="Result Image" title="Result Image"></p>
+		<p><img src="../images/2-025example.png" alt="Result Image" title="Result Image"></p>
 		<h2>Example Code 示例代碼 </h2>
-		<p class="hints">
-			// This program will draw an 8 ball &ensp; //此程序將繪製一個8球 <br>
-			// centered on the screen. The circle &ensp; //在屏幕上居中。圓 <br>
-			// should be black with radius 100, and &ensp; //應該是黑色的，半徑100，和 <br>
-			// the "8" should be white in 50pt Arial &ensp; //“8”應該是白色的50點宋體 <br>
-			// font. &ensp; //字體。 <br>
-			function start(){ &ensp; 函數的開始（）{ <br>
-			&ensp;&ensp; var ball = new Circle(100); &ensp; 可變球=新圓（100）; <br>
-			&ensp;&ensp; var centerX = getWidth() / 2; &ensp; 可變中心X =得到寬度（）/2; <br>
-			&ensp;&ensp; var centerY = getHeight() / 2; &ensp; 可變中心Y = GET高度（）/2;<br>
-			&ensp;&ensp; ball.setPosition(centerX, centerY); &ensp; 球。設定位置（中心X，中心Y）; <br>
-			&ensp;&ensp; add(ball); &ensp; 添加（球）; <br>
-			<br>
-			&ensp;&ensp; var number = new Text("8"); &ensp; 可變數目=新文本（“8”）; <br>
-			&ensp;&ensp; number.setFont("50pt Arial"); &ensp; 數。設置字體（“50點宋體”）; <br>
-			&ensp;&ensp; number.setColor(Color.white); &ensp; 數。設置顏色（顏色。白）; <br>
-			&ensp;&ensp; number.setPosition(centerX - number.getWidth()/2, centerY + number.getWidth()/2); &ensp; 數。設定位置（。中心x - 數得到寬（）/2，中心Y +數量得到寬度（）/2）; <br>
-			&ensp;&ensp; add(number); &ensp; 添加（數量）; <br>
-			}
+		<pre class="prettyprint">
+// This program will draw an 8 ball 
+// centered on the screen. The circle
+// should be black with radius 100, and
+// the "8" should be white in 50pt Arial
+// font.
+function start(){
+	var ball = new Circle(100);
+	var centerX = getWidth() / 2;
+	var centerY = getHeight() / 2;
+	ball.setPosition(centerX, centerY);
+	add(ball);
+	
+	var number = new Text("8");
+	number.setFont("50pt Arial");
+	number.setColor(Color.white);
+	number.setPosition(centerX - number.getWidth()/2, centerY + number.getWidth()/2);
+	add(number);
+}
+
+//這項計劃將利用一個8球 
+//在屏幕上居中。圓 
+//應該是黑色的，半徑100，和 
+//的“8”應該是白色的50點宋體 
+//字體。 		
+函數的開始（）{
+	可變球=新圓（100）; 
+	可變中心X =得到寬度（）/2; 
+	變芯Y=獲取高度（）/2; 
+	球。設置位置（中X，中心Y）; 
+	添加（球）; 
+
+	變種數=新的文本（“8”）; 
+	數。設置字體（“50pt宋體”）; 
+	數。設置顏色（顏色。白色）; 
+	數。設置位置（中心X - 號。獲得寬度（）/2，中心Y +號。得到寬（）/ 2）; 
+	添加（數）; 
+}
 		</p>
 		<p><i class="fa fa-home fa-2x"></i><a href="../basicJavaHome.html"> Return to Graphics Home Page 返回顯卡首頁 </a></p>
 	</body>

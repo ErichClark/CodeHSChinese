@@ -114,3 +114,10 @@ a:visited {
 .tab2 { margin-left: 80px; }
 
 .tab3 { margin-left: 120px; }
+
+
+pre.prettyprint{
+	font-family: Verdana, Geneva, Arial, sans-serif;
+	font-size: medium;
+	line-height: 1.5em;
+}
