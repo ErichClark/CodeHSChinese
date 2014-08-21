@@ -1,0 +1,559 @@
+解碼高中Java單元秘技
+ 
+列印至主控台
+
+println(str);
+print(str);
+
+// 舉例: 
+println("嗨，我的世界.");
+//不換行列印:
+print("嗨，我的世界. ");
+print("你好嗎?");
+
+
+變數
+
+
+//命名一個變數
+var myVarName;
+
+//將變數初始化
+var myVarName = 5;
+
+//指定已存在之變數
+myVarName = 10;
+
+//印出變數
+println(myVarName);
+println("數值是: " + myValue);
+
+
+使用者輸入
+
+//讀入字串
+var str = readLine(提示);
+
+//讀入整數
+var num = readInt(提示);
+
+//讀入浮動數
+var cost = readFloat(提示);
+
+//你應該在提示處填入
+//你想問的問題。 舉例:
+var name = readLine("你叫什麼名字? ");
+var age = readInt("你幾歲? ");
+
+
+比較運算子
+
+
+//比較運算子傳回布爾值（真／假值）
+
+x == y // 是x與y相等
+x > y //  是x比y大
+x >= y // 是x比y大或與y相等
+x < y // 是x比y小
+x <= y // 是x比y小或與y相等
+
+// 比較運算子在條件陳述中
+if(x == y){
+println("x與y相等");
+}
+
+if(x > 5){
+println("x比5大.");
+}
+
+數學
+
+// 運算子:
++ 加
+- 減
+* 乘
+/ 除
+% 模數 (餘數)
+() 括號 (決定運算順序)
+
+// 例子
+var z = x + y;
+var w = x * y;
+
+//增值 (加一)
+x++
+
+//減值 (減一)
+x--
+
+//捷徑
+x = x + y; x += y;
+x = x - y; x -= y;
+x = x * y; x *= y;
+x = x / y; x /= y;
+
+// 絕對值
+var abs = Math.abs(x);
+
+// 平方根
+var sqrt = Math.sqrt(x);
+
+
+亂數
+
+
+// 大小數值間的隨機整數
+Randomizer.nextInt(小, 大); 
+Randomizer.nextBoolean(); 
+Randomizer.nextFloat(小, 大); 
+Randomizer.nextColor(); 
+
+var roll = Randomizer.nextInt(1,6);
+
+var color = Randomizer.nextColor();
+
+
+圖表
+
+畫布
+
+//傳回畫布的寬度
+getWidth();
+
+//傳回畫布的高度
+getHeight();
+
+// 例子
+var height = getHeight();
+
+//傳回畫布中心點的 
+// x座標
+var center = getWidth() / 2;
+
+//移除畫布中的所有物件
+removeAll();
+
+
+所有的圖像物件
+
+
+//獲得某種物件
+var type = obj.getType();
+
+/*
+可傳回:
+'圓圈'
+'長方形'
+'文字'
+'線條'
+*/
+
+
+圓圈
+
+//產生一個圓圈
+var circle = 新的圓(半徑);
+
+// 例子, 半徑為50像素的圓
+var circle =新的圓(50);
+circle.setPosition(x, y);
+circle.setColor(顏色.紅色);
+circle.setRadius(100); //改變半徑
+
+//加至螢幕
+加(圓圈);
+
+//平行移動圓的x微分，垂直移動圓的y微分
+circle.move(x微分, y微分);
+
+
+長方形
+//產生一個長方形
+var rect = 新的長方形(寬度, 高度);
+
+//例子, 200乘以50 的長方形
+var rect = 新的長方形(200, 50);
+rect.setPosition(x, y);
+rect.setColor(顏色.藍色);
+
+//加至螢幕
+加(長方形);
+
+// 平行移動長方形的x微分，垂直移動長方形的y微分
+ rect.move(x微分, y微分);
+
+
+線條
+
+// 從(x1, y1) 畫一條線到(x2, y2)
+var line = 新的線條(x1, y1, x2, y2);
+
+line.setColor(顏色.綠色);
+
+// 加至螢幕
+加(線條);
+
+// 平行移動線條的x微分，垂直移動線條的y微分
+line.move(x微分, y微分);
+
+// 將線條的起始點改成(x1, y1)
+line.setPosition(x1, y1);
+
+// 將線條的終止點改成 (x2, y2)
+line.setEndpoint(x2, y2);
+
+
+文字
+
+//產生圖像的文字物件
+var txt = 新的文字(標籤, 字型);
+
+// 例子
+var txt = 新的文字("嗨，我的世界！", "30點數 Arial字型");
+txt.setPosition(x, y);
+txt.setColor(顏色.藍色);
+
+// 改變文字內容
+txt.setText("再見!");
+
+// 加至螢幕
+加(文字);
+
+// 平行移動文字的x微分，垂直移動文字的y微分
+txt.move(x微分, y微分);
+
+
+顏色
+
+// 色彩常數有很多。你可以設定某物件的 
+// 顏色，像是
+obj.setColor(顏色);
+
+// 特定明確地
+obj.setColor(顏色.紅色);
+
+// 可使用的顏色有:
+顏色.紅色
+顏色.綠色
+顏色.藍色
+顏色.黃色
+顏色.青綠色
+顏色.橘色
+顏色.白色
+顏色.黑色
+顏色.灰色
+顏色.紫色
+
+// 你也可以創造你自己的顏色，提供紅色、綠色
+// 和藍色成分，像是
+var color = 新的顏色(紅, 綠, 藍);
+
+// 每個成分的數值介於0-255之間
+
+// 特定明確地
+var color = new Color(255, 24, 180);
+
+// 其他有趣的功能
+// 傳回一個隨機的顏色
+var color = Color.randomRed();
+var color = Color.randomGreen();
+var color = Color.randomBlue();
+
+// 從隨機器中取得一個隨機的顏色
+var color = Randomizer.nextColor();
+
+
+布爾數學
+
+// 布爾值非真即假
+var myBoolean = 真;
+
+var anotherBoolean = 假;
+
+var result = readBoolean("問題? ");
+
+//非運算子
+var x = !y; // x 取得y的相反
+
+//以及運算子
+var andExp = x && y;
+
+//或者運算子
+var orExp = x || y;
+
+// 你可以合併很多的布爾值！
+ var boolExp = x && (y || z);
+
+
+條件陳述，如果/不成立時
+
+如果(布爾＿運算式){
+// 如果為真，執行程式碼
+}
+
+如果(布爾＿運算式){
+// 如果為真之程式碼
+} 不成立時 { 
+// 如果為假之程式碼
+}
+
+如果(x < 0){
+println("x 為負數.");
+}
+
+如果(顏色 == "紅色" || 顏色 == "藍色" || 顏色== "黃色"){
+println("主要顏色.");
+} 不成立時 {
+println("非主要顏色.");
+}
+
+// 你可以使用“不成立時，如果…”敘述，如果你有多樣的
+// 條件，但應只有一個條件會發生
+如果(條件_1){
+
+} 不成立時，如果(條件_2) {
+
+}不成立時，如果(條件_3) {
+
+} 不成立 {
+
+}
+
+
+// 你寫程式時，可以用巢式 
+// if/else敘述。舉例：
+如果(條件_1){
+// 如果條件1為真，執行程式碼
+} 不成立 {
+如果(條件_2){
+// 如果條件2為真
+} 不成立 {
+// 如果條件2為假，回到這
+}
+}
+
+
+指定執行次數的迴圈
+
+var COUNT = 5;
+
+for(var i = 0; i &lt; COUNT; i++){
+/* 重複括號中的程式碼5次, 
+* 當計算變量為5 時*/
+}
+
+// 印0到9的號碼
+for(var i = 0; i < 10; i++){
+println(i);
+}
+
+指定條件的迴圈
+
+當(布爾運算式){
+/* 重複括號中的程式碼，當 
+* '布爾運算式 ' 為真時 */
+}
+
+// 從15倒數至10
+var i = 15; 
+當(i > 10){
+println(i);
+i--;
+}
+
+
+
+// 這是一個迴圈和半個格式
+當(真){
+// 程式碼
+如果(條件){
+中斷;
+}
+}
+
+
+計時器
+
+setTimer(fn, 延遲); // 產生計時器
+stopTimer(fn); // 停止計時器
+
+// 例子: 每毫秒叫出 moveBall 一次
+
+函數 moveBall() {
+球.移動(x, y);
+}
+
+函數 開始 () {
+setTimer(moveBall, 40); 
+}
+
+
+滑鼠相關事件
+
+函數 開始() {
+// 設定滑鼠回應
+滑鼠移動方式 (滑鼠的移動);
+滑鼠點擊方式 (加球);
+滑鼠拖曳方式 (更新線條);
+}
+
+函數 滑鼠的移動(e) {
+println("滑鼠在 (" + 
+e.getX() + ", " +
+e.getY() + ").");
+}
+
+函數 加球(e) {
+var ball = 新的圓圈(20);
+球.設定位置(e.getX(), e.getY());
+加(球);
+}
+
+函數 更新線條(e) {
+線條.設定終止點 (e.getX(), e.getY());
+}
+
+鍵盤相關的事件
+
+函數 開始() {
+// 設定鍵盤回應
+偵測到鍵盤有按鍵被按住的方式 (有按鍵被按住);
+偵測被按住的按鍵已被放開的方式 (已按住按鍵被放開);
+}
+
+函數有按鍵被按住(e) {
+如果 (e.keyCode == Keyboard.LEFT) {
+球.移動(-5, 0);
+}
+如果(e.keyCode == Keyboard.letter('K')){
+println("你按住K");
+}
+}
+
+函數已按住按鍵被放開(e) {
+println("你放開一個按鍵");
+}
+
+
+其他
+
+函數 開始() {
+滑鼠點擊方式(變紅色); 
+}
+
+// 如果你點擊一個物件，將它變成紅色
+函數 變紅色(e) {
+var elem = getElementAt(e.getX(), e.getY());
+如果(elem != null) {
+elem.setColor(顏色.紅色);
+}
+}
+
+
+陣列
+
+// 創造一個空白的陣列
+var arr = [];
+
+// 創造一個有數值的陣列
+var arr = [1, 2, 4];
+
+// 陣列中可以有任何種類
+var arr = [4, "哈囉", x];
+
+// 存取陣列中的元素
+var elem = arr[i];
+
+var firstElem = arr[0];
+
+// 在陣列中設置一個元素
+arr[4] = 9;
+
+// 重複執行一個陣列
+for(var i = 0; i < arr.length; i++){
+var cur = arr[i];
+// process cur
+}
+
+// 陣列的長度
+var length = arr.length;
+
+// 增加至陣列
+arr.push(elem);
+
+// 從陣列中移除僅剩的元素
+var last = arr.pop();
+
+// 在清單中尋找元素
+var index = arr.indexOf(5);
+
+// 從索引i中的清單裡移除一個元素
+ arr.remove(i)
+
+關聯陣列/物件
+
+//物件實字
+var obj = {
+名字: "傑洛米",
+顏色: "藍色" 
+};
+
+// 物件／關聯陣列有大量的鍵值對
+
+// 設定一個數值
+obj["傑洛米"] = "123-4567";
+
+// 添加一個鍵的值
+var 電話 = obj["傑洛米"];
+
+// 重複執行一個物件
+for(var key in obj){
+var val = obj[key];
+// 執行鍵值 
+}
+
+
+無序群集
+
+// 創造一個新的群集並將其命名為“新群集”	
+var newSet = 新群集();
+
+// 增加至群集
+newSet.add(5);
+
+// 群集是否含有一個數值 
+newSet.contains(5); // 傳回布爾值
+
+// 群集內的元素數量
+ newSet.size(); // 傳回一個整數
+
+
+
+方格
+
+// 創造一個方格並將其命名為“新方格” 
+var newGrid = 新方格 (行, 列);
+
+// 在方格內取得一個數值
+var elem = 新方格.取得(行, 列);
+
+// 在方格內設定一個數值
+新方格.設定(行, 列, 值);
+
+// 確認尺寸大小
+var 行 = newGrid.numRows();
+var 列 = newGrid.numCols();
+
+// 輸入行列對
+newGrid.inBounds(行, 列);
+
+// 將方格中的所有數值設為初始值
+newGrid.init(0); // 將所有方格值設為0
+
+//從陣列中初始化一個方格 
+newGrid.initFromArray([
+[6, 3, 2], // 第0行
+[2, 5, 1], // 第1行
+[4, 3, 9], // 第2行
+[1, 5, 1] // 第3行
+]);

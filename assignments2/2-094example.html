@@ -19,9 +19,43 @@
 		<h2>Goal Output 目標輸出 </h2>
 		<p><img src="../images/2-094example.png" alt="Result Image" title="Result Image"></p>
 		<h2>Example Code 示例代碼 </h2>
-		<p class="hints">
-			CODE_HERE
-		</p>
+		<pre class="prettyprint">
+/* Write a function to draw a circle,given
+ * a radius, color, and x and y position
+ * for the center. 
+ */
+function drawCircle(radius, color, x, y){
+	var circle = new Circle(radius);
+	circle.setColor(color);
+	circle.setPosition(x, y);
+	add(circle);
+}
+
+function start(){
+   	drawCircle(40, Color.red, 100, 300);
+	drawCircle(50, Color.green, 50, 100);
+	drawCircle(70, Color.blue, 
+	getWidth()/2, getHeight()/2);
+}
+
+/*寫一個函數來畫一個圓，因為 
+ *半徑，顏色，x和y位置 
+ *為中心。 
+ */ 
+函數繪製圓（半徑，顏色 x, y){
+	變圓=新圓（半徑）; 
+	圈子。設置顏色（彩色）;
+	圈子。設置的位置(x, y);
+	加（圈）; 
+}
+
+函數的開始（）{
+   	繪製圓(40, 顏色。紅, 100, 300);
+	繪製圓(50, 顏色。綠色, 50, 100);
+	繪製圓(70, 顏色。藍色, 
+	得到寬()/2, 得到高度()/2);
+}
+		</pre>
 		<p><i class="fa fa-home fa-2x"></i><a href="../basicJavaHome.html"> Return to Graphics Home Page 返回顯卡首頁 </a></p>
 	</body>
 </html>

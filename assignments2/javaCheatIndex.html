@@ -1,0 +1,1130 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Java Cheat Sheet</title>
+		<link type="text/css" rel="stylesheet" href="../css/karelStyle.css"
+			media="screen and (min-width: 481px)">
+		<link type="text/\css" rel="stylesheet" href="../css/karelStyle.css"
+			media="screen and (max-width: 480px)">
+		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<h1><i class="fa fa-life-ring fa-3x"></i>CodeHS Java Unit Cheat Sheet <br> 解碼高中Java單元秘技 </h1>
+	<ul class="objective">
+		<li>Basics 基礎知識
+			<ul> 
+				<li><a href="#printing">Printing 列印至主控台</a></li>
+				<li><a href="#variables">Variables 變數</a></li>
+				<li><a href="#userInput">User Input 使用者輸入</a></li>	
+				<li><a href="#comparisonOperators">Comparison Operators 比較運算子 </a></li>
+				<li><a href="#math">Math 數學 </a></li>
+				<li><a href="#randomizer">Randomizer 亂數</a></li>
+			</ul></li>
+		<li>Graphics 圖表
+			<ul>
+				<li><a href="#canvas">Canvas 畫布 </a></li>
+				<li><a href="#allObjects">All Graphics Objects 所有的圖像物件 </a></li>
+				<li><a href="#circles">Circles 圓圈 </a></li>
+				<li><a href="#rectangles">Rectangles 長方形 </a></li>
+				<li><a href="#lines">Lines 線條 </a></li>
+				<li><a href="#text">Text 文字 </a></li>
+				<li><a href="#color">Color 顏色 </a></li>
+			</ul></li>
+		<li>Control Structures 控制結構
+			<ul>
+				<li><a href="#booleans">Booleans 布爾數學 </a></li>
+				<li><a href="#ifElse">If/Else 如果/不成立時 </a></li>
+				<li><a href="#forLoops">For Loops 指定執行次數的迴圈 </a></li>
+				<li><a href="#whileLoops">While Loops 指定條件的迴圈 </a></li>
+			</ul></li>
+		<li>Animation 動畫
+			<ul>
+				<li><a href="#timers">Timers 計時器 </a></li>
+				<li><a href="#mouseEvents">Mouse Events 滑鼠相關事件 </a></li>
+				<li><a href="#keyboardEvents">Keyboard Events 鍵盤相關的事件 </a></li>
+				<li><a href="#misc">Misc 其他 </a></li>
+			</ul></li>
+		<li>Data Structures 數據結構
+			<ul>
+				<li><a href="#arrays">Arrays 陣列 </a></li>
+				<li><a href="#mapsObjects">Maps/Objects 關聯陣列/物件 </a></li>
+				<li><a href="#sets">Sets 無序群集 </a></li>
+				<li><a href="#grids">Grids 方格 </a></li>
+			</ul></li>
+	</ul>
+
+	<h2> Basics  基礎知識</h2>
+		<h3 id=”printing”>Printing to Console 列印至主控台 </h3>
+		<pre class=”prettyprint”>
+	println(str);
+	print(str);
+
+	// Example:
+	println("Hello world.");
+
+	// Printing without a new line:
+	print("Hello world. ");
+	print("How are you?");
+
+	印出連結檔(字串);
+	印出(字串);
+
+	// 舉例: 
+	印出此行("嗨，我的世界.");
+	//不換行列印:
+	印出("嗨，我的世界. ");
+	印出("你好嗎?");
+		</pre>
+
+		<h3 id=”variables”>Variables 變數 </h3>
+		<pre class=”prettyprint”>
+
+	// Declare a variable
+	var myVarName;
+
+	// Initialize a variable
+	var myVarName = 5;
+
+	// Assign to an existing variable
+	myVarName = 10;
+
+	// Print a variable
+	println(myVarName);
+	println("The value is: " + myValue);
+
+	//命名一個變數
+	變數 我的變數名稱;
+
+	//將變數初始化
+	變數 我的變數名稱= 5;
+
+	//指定已存在之變數
+	我的變數名稱= 10;
+
+	//印出變數
+	印出連結檔(我的變數名稱);
+	印出連結檔 ("數值是: " + 我的變數);
+		</pre>
+
+		<h3 id=”userInput”>User Input 使用者輸入 </h3>
+		<pre class=”prettyprint”>
+		
+	// Read a string
+	var str = readLine(prompt);
+
+	// Read an integer
+	var num = readInt(prompt);
+
+	// Read a float
+	var cost = readFloat(prompt);
+
+	// You should replace the word prompt with
+	// the question you'd like to ask. For example:
+	var name = readLine("What is your name? ");
+	var age = readInt("What is your age? ");
+
+	//讀入字串
+	變數 字串= 讀入該行(提示);
+
+	//讀入整數
+	變數 數字= 讀入整數(提示);
+
+	//讀入浮動數
+	變數 成本= 讀入浮動數(提示);
+
+	//你應該在提示處填入
+	//你想問的問題。 舉例:
+	變數 名字 = 讀入該行("你叫什麼名字? ");
+	變數 年齡 = 讀入整數("你幾歲? ");
+		</pre>
+		
+		<h3 id=”comparisonOperators”>Comparison Operators  比較運算子</h3>
+		<pre class=”prettyprint”>
+
+	// Comparison operators return booleans (true/false values)
+
+	x == y // is x equal to y
+	x &#62; y // is x greater than y
+	x &#62;= y // is x greater than or equal to y
+	x &#60; y // is x less than y
+	x &#60;= y // is x less than or equal to y
+
+	// Comparison operators in if statements
+	if(x == y){
+		println("x and y are equal");
+	}
+
+	if(x &#62; 5){
+		println("x is greater than 5.");
+	}
+
+	//比較運算子傳回布爾值（真／假值）
+
+	x == y // 是x與y相等
+	x &#62; y //  是x比y大
+	x &#62;= y // 是x比y大或與y相等
+	x &#60; y // 是x比y小
+	x &#60;= y // 是x比y小或與y相等
+
+	// 比較運算子在條件陳述中
+	如果(x == y){
+		印出連結檔("x與y相等");
+	}
+
+	如果(x &#62; 5){
+		印出連結檔("x比5大.");
+	}
+		</pre>
+
+		<h3 id=”math”>Math  數學</h3>
+		<pre class=”prettyprint”>
+		
+	// Operators:
+	+ Addition
+	- Subtraction
+	* Multiplication
+	/ Division
+	% Modulus (Remainder)
+	() Parentheses (For order of operations)
+
+	// Examples
+	var z = x + y;
+	var w = x * y;
+
+	//Increment (add one)
+	x++
+
+	//Decrement (subtract one)
+	x--
+
+	//Shortcuts
+	x = x + y; x += y;
+	x = x - y; x -= y;
+	x = x * y; x *= y;
+	x = x / y; x /= y;
+
+	// Absolute value
+	var abs = Math.abs(x);
+
+	// Square root
+	var sqrt = Math.sqrt(x);
+
+	// 運算子:
+	+ 加
+	- 減
+	* 乘
+	/ 除
+	% 模數 (餘數)
+	() 括號 (決定運算順序)
+
+	// 例子
+	變數 z = x + y;
+	變數 w = x * y;
+
+	//增值 (加一)
+	x++
+
+	//減值 (減一)
+	x--
+
+	//捷徑
+	x = x + y; x += y;
+	x = x - y; x -= y;
+	x = x * y; x *= y;
+	x = x / y; x /= y;
+
+	// 絕對值
+	變數 絕對值= 數學.絕對值(x);
+
+	// 平方根
+	變數 平方根= 數學.平方根(x);
+		</pre>
+
+		<h3 id=”randomNumbers”>Randomizer  亂數 </h3>
+		<pre class=”prettyprint”>
+
+	// Random integer between low and high
+	Randomizer.nextInt(low, high); 
+	Randomizer.nextBoolean(); 
+	Randomizer.nextFloat(low, high); 
+	Randomizer.nextColor(); 
+
+	var roll = Randomizer.nextInt(1,6);
+
+	var color = Randomizer.nextColor();
+
+	// 大小數值間的隨機整數
+	亂數產生器.下一個整數(小, 大); 
+	亂數產生器.下一個布爾值 (); 
+	亂數產生器.下一個浮動數 (小, 大); 
+	亂數產生器.下一個顏色 (); 
+
+	變數 清單=亂數產生器.下一個整數(1,6);
+
+	變數 顏色 =亂數產生器.下一個顏色 ();
+		</pre>
+
+	<h2>Graphics  圖表</h2>
+
+		<h3 id=”canvas”>Canvas 畫布 </h3>
+		<pre class=”prettyprint”>
+		
+	// returns the width of the canvas
+	getWidth();
+
+	// returns the height of the canvas
+	getHeight();
+
+	// Examples
+	var height = getHeight();
+
+	// Returns the x coordinate of the center
+	// of the canvas
+	var center = getWidth() / 2;
+
+	// Removes all objects from the canvas
+	removeAll();
+
+	//傳回畫布的寬度
+	取得寬度();
+
+	//傳回畫布的高度
+	取得高度();
+
+	// 例子
+	變數 高度 = 取得高度();
+
+	//傳回畫布中心點的 
+	// x座標
+	變數 中心 = 取得寬度() / 2;
+
+	//移除畫布中的所有物件
+	移除全部();
+		</pre>
+
+		<h3 id=”allObjects”>All Graphics Objects  所有的圖像物件</h3>
+		<pre class=”prettyprint”>
+
+	// To get the type of the object
+	var type = obj.getType();
+
+	/*
+	could return:
+	'Circle'
+	'Rectangle'
+	'Text'
+	'Line'
+	*/
+
+	//獲得某種物件
+	變數 種類 = 物件.取得種類();
+
+	/*
+	可傳回:
+	'圓圈'
+	'長方形'
+	'文字'
+	'線條'
+	*/
+		</pre>
+
+		<h3 id=”circles”>Circles 圓圈</h3>
+		<pre class=”prettyprint”>
+		
+	// To make a circle
+	var circle = new Circle(radius);
+
+	// Example, circle with 50px radius
+	var circle = new Circle(50);
+	circle.setPosition(x, y);
+	circle.setColor(Color.red);
+	circle.setRadius(100); // Change the radius
+
+	// Add to screen
+	add(circle);
+
+	// move the circle dx horizontally and dy vertically
+	circle.move(dx, dy);
+
+	//產生一個圓圈
+	變數 圓圈 = 新的圓(半徑);
+
+	// 例子, 半徑為50像素的圓
+	變數 圓圈 =新的圓(50);
+	圓圈.設定位置 (x, y);
+	圓圈.設定顏色(顏色.紅色);
+	圓圈.設定半徑(100); //改變半徑
+
+	//加至螢幕
+	加(圓圈);
+
+	//平行移動圓的x微分，垂直移動圓的y微分
+	圓圈.移動 (x微分, y微分);
+		</pre>
+
+		<h3 id=”rectangles”>Rectangles  長方形</h3>
+		<pre class=”prettyprint”>
+		
+	// To make a rectangle
+	var rect = new Rectangle(width, height);
+
+	// Example, 200x50 rectangle
+	var rect = new Rectangle(200, 50);
+	rect.setPosition(x, y);
+	rect.setColor(Color.blue);
+
+	// Add to screen
+	add(rect);
+
+	// move the rect dx horizontally and dy vertically
+	rect.move(dx, dy);
+
+	//產生一個長方形
+	變數 長方形 = 新的長方形(寬度, 高度);
+
+	//例子, 200乘以50 的長方形
+	變數 長方形 = 新的長方形(200, 50);
+	長方形.設定位置 (x, y);
+	長方形.設定顏色(顏色.藍色);
+
+	//加至螢幕
+	加(長方形);
+
+	// 平行移動長方形的x微分，垂直移動長方形的y微分
+	長方形.移動(x微分, y微分);
+		</pre>
+		
+		<h3 id=”lines”>Lines  線條</h3>
+		<pre class=”prettyprint”>
+		
+	// To draw a line from (x1, y1) to (x2, y2)
+	var line = new Line(x1, y1, x2, y2);
+
+	line.setColor(Color.green);
+
+	// Add to screen
+	add(line);
+
+	// move the line dx horizontally and dy vertically
+	line.move(dx, dy);
+
+	// change the starting point of the line to (x1, y1)
+	line.setPosition(x1, y1);
+
+	// change the end point of the line to (x2, y2)
+	line.setEndpoint(x2, y2);
+
+	// 從(x1, y1) 畫一條線到(x2, y2)
+	變數 線條 = 新的線條(x1, y1, x2, y2);
+
+	線條.設定顏色(顏色.綠色);
+
+	// 加至螢幕
+	加(線條);
+
+	// 平行移動線條的x微分，垂直移動線條的y微分
+	線條.移動(x微分, y微分);
+
+	// 將線條的起始點改成(x1, y1)
+	線條.設定位置(x1, y1);
+
+	// 將線條的終止點改成 (x2, y2)
+	線條.設定終點(x2, y2);
+		</pre>
+
+		<h3 id=”text”>Text  文字</h3>
+		<pre class=”prettyprint”>
+		
+	// To make a graphical text object
+	var txt = new Text(label, font);
+
+	// Example
+	var txt = new Text("Hello, world!", "30pt Arial");
+	txt.setPosition(x, y);
+	txt.setColor(Color.blue);
+
+	// Change what the text says
+	txt.setText("Goodbye!");
+
+	// Add to screen
+	add(txt);
+
+	// move the text dx horizontally and dy vertically
+	txt.move(dx, dy);
+
+	//產生圖像的文字物件
+	變數 文字 = 新的文字(標籤, 字型);
+
+	// 例子
+	變數文字= 新的文字("嗨，我的世界！", "30點數 Arial字型");
+	文字.設定位置(x, y);
+	文字.設定顏色(顏色.藍色);
+
+	// 改變文字內容
+	文字.設定文字("再見!");
+
+	// 加至螢幕
+	加(文字);
+
+	// 平行移動文字的x微分，垂直移動文字的y微分
+	文字.移動 (x微分, y微分);
+		</pre>
+
+		<h3 id=”color”>Color  顏色</h3>
+		<pre class=”prettyprint”>
+		
+	// There are many color constants. You can set an objects 
+	// color like
+	obj.setColor(color);
+
+	// Specifically,
+	obj.setColor(Color.RED);
+
+	// List of available colors:
+	Color.RED
+	Color.GREEN
+	Color.BLUE
+	Color.YELLOW
+	Color.CYAN
+	Color.ORANGE
+	Color.WHITE
+	Color.BLACK
+	Color.GRAY
+	Color.PURPLE
+
+	// You can also make your own color by giving a red, green,
+	// and blue component like
+	var color = new Color(r, g, b);
+
+	// The values are between 0-255 for each component.
+
+	// specifically
+	var color = new Color(255, 24, 180);
+
+	// Other fun functions
+	// Return a random color
+	var color = Color.randomRed();
+	var color = Color.randomGreen();
+	var color = Color.randomBlue();
+
+	// Get a random color from the randomizer
+	var color = Randomizer.nextColor();
+
+	// 色彩常數有很多。你可以設定某物件的 
+	// 顏色，像是
+	物件.設定顏色(顏色);
+
+	// 特定明確地
+	物件.設定顏色(顏色.紅色);
+
+	// 可使用的顏色有:
+	顏色.紅色
+	顏色.綠色
+	顏色.藍色
+	顏色.黃色
+	顏色.青綠色
+	顏色.橘色
+	顏色.白色
+	顏色.黑色
+	顏色.灰色
+	顏色.紫色
+
+	// 你也可以創造你自己的顏色，提供紅色、綠色
+	// 和藍色成分，像是
+	變數 顏色 = 新的顏色(紅, 綠, 藍);
+
+	// 每個成分的數值介於0-255之間
+
+	// 特定明確地
+	變數 顏色 = 新的顏色 (255, 24, 180);
+
+	// 其他有趣的功能
+	// 傳回一個隨機的顏色
+	變數 顏色 = 顏色.隨機紅色();
+	變數 顏色  =顏色.隨機綠色();
+	變數 顏色 =顏色.隨機藍色();
+
+	// 從隨機器中取得一個隨機的顏色
+	變數 顏色= 亂數產生器.下一個顏色();
+		</pre>
+
+	<h2>Control Structures  控制結構</h2>
+	
+		<h3 id=”booleans”>Booleans  布爾數學</h3>
+		<pre class=”prettyprint”>
+		
+	// A boolean is either true or false
+	var myBoolean = true;
+
+	var anotherBoolean = false;
+
+	var result = readBoolean("Question? ");
+
+	// Not Operator
+	var x = !y; // x gets the opposite of y
+
+	// And Operator
+	var andExp = x && y;
+
+	// Or Operator
+	var orExp = x || y;
+
+	// You can combine many booleans!
+	var boolExp = x && (y || z);
+
+	// 布爾值非真即假
+	變數 我的布爾值 = 真;
+
+	變數 另一個布爾值 = 假;
+
+	變數 結果 = 讀入布爾值 ("問題? ");
+
+	//非運算子
+	變數 x = !y; // x 取得y的相反
+
+	//以及運算子
+	變數 和運算式 = x && y;
+
+	//或者運算子
+	變數 或運算式 = x || y;
+
+	// 你可以合併很多的布爾值！
+	 變數 布爾運算式 = x && (y || z);
+		</pre>
+
+		<h3 id=”ifElse”>If Statements, If/Else   條件陳述，如果/不成立時</h3>
+		<pre class=”prettyprint”>
+		
+	if(BOOLEAN_EXPRESSION){
+		// code to execute if true
+	}
+
+	if(BOOLEAN_EXPRESSION){
+		// code if true
+	} else { 
+		// code if false
+	}
+
+	if(x &#60; 0){
+		println("x is negative.");
+	}
+
+	if(color == "red" || color == "blue" || color == "yellow"){
+		println("Primary color.");
+	} else {
+		println("Not a primary color.");
+	}
+
+	// You can use else if if you have multiple 
+	// conditions, but only one should happen.
+	if(condition_1){
+
+	} else if(condition_2) {
+
+	} else if(condition_3) {
+
+	} else {
+
+	}
+
+
+	// You can always write these using nested 
+	// if/else. For example:
+	if(condition_1){
+		// code here runs if condition 1 is true
+	} else {
+		if(condition_2){
+			// if condition 2 is true
+		} else {
+			// and here if condition 2 is false
+		}
+	}
+
+	如果(布爾＿運算式){
+		// 如果為真，執行程式碼
+	}
+
+	如果(布爾＿運算式){
+		// 如果為真之程式碼
+	} 不成立時 { 
+		// 如果為假之程式碼
+	}
+
+	如果(x &#60; 0){
+		印出連結檔("x 為負數.");
+	}
+
+	如果(顏色 == "紅色" || 顏色 == "藍色" || 顏色== "黃色"){
+		印出連結檔("主要顏色.");
+	} 不成立時 {
+		印出連結檔("非主要顏色.");
+	}
+
+	// 你可以使用“不成立時，如果…”敘述，如果你有多樣的
+	// 條件，但應只有一個條件會發生
+	如果(條件_1){
+
+	} 不成立時，如果(條件_2) {
+
+	}不成立時，如果(條件_3) {
+
+	} 不成立 {
+
+	}
+
+
+	// 你寫程式時，可以用巢式 
+	// 如果/不成立 敘述。舉例：
+	如果(條件_1){
+		// 如果條件1為真，執行程式碼
+	} 不成立 {
+		如果(條件_2){
+			// 如果條件2為真
+		} 不成立 {
+			// 如果條件2為假，回到這
+		}
+	}
+		</pre>
+
+		<h3 id=”forLoops”>For Loops   指定執行次數的迴圈</h3>
+		<pre class=”prettyprint”>
+		
+var COUNT = 5;
+
+	for(var i = 0; i &#60; COUNT; i++){
+		/* Repeat code betweeen the brackets 5 times, 
+		* as the COUNT variable is 5. */
+	}
+
+	// Print numbers 0-9
+	for(var i = 0; i &#60; 10; i++){
+		println(i);
+	}
+
+變數 次數 = 5;
+
+	當(變數 i = 0; i &#60; 次數; i++){
+		/* 重複括號中的程式碼5次, 
+		* 當計算變量為5 時*/
+	}
+
+	// 印0到9的號碼
+	當(變數 i = 0; i &#60; 10; i++){
+		印出連結檔(i);
+	}
+		</pre>
+		
+		<h3 id=”whileLoops”>While Loops  指定條件的迴圈</h3>
+		<pre class=”prettyprint”>
+		
+	while(boolean expression){
+		/* Repeat code betweeen brackets while 
+		* 'boolean expression' is true */
+	}
+
+	// Countdown from from 15 to 10
+	var i = 15; 
+	while(i &#62; 10){
+		println(i);
+		i--;
+	}
+
+	// This is a loop and a half format
+	while(true){
+		// code
+		if(condition){
+		break;
+		}
+	}
+
+
+	當(布爾運算式){
+		/* 重複括號中的程式碼，當 
+		* '布爾運算式 ' 為真時 */
+	}
+
+	// 從15倒數至10
+	變數 i = 15; 
+	當(i &#62; 10){
+		印出連結檔(i);
+		i--;
+	}
+
+
+
+	// 這是一個迴圈和半個格式
+	當(真){
+		// 程式碼
+		如果(條件){
+		中斷;
+		}
+	}
+		</pre>
+		
+	<h2>Animation   動畫</h2>
+	
+		<h3 id=”timers”>Timers  計時器</h3>
+		<pre class=”prettyprint”>
+		
+	setTimer(fn, delay); // Create a timer
+	stopTimer(fn); // Stop a timer
+
+	// Example: call moveBall every 40 milliseconds
+
+	function moveBall() {
+		ball.move(x, y);
+	}
+
+	function start() {
+		setTimer(moveBall, 40); 
+	}
+
+	設定計時器(函數, 延遲); // 產生計時器
+	停止計時器 (函數); // 停止計時器
+
+	// 例子: 每毫秒叫出 移動球 一次
+
+	函數 移動球() {
+		球.移動(x, y);
+	}
+
+	函數 開始 () {
+		設定計時器(移動球, 40); 
+	}
+		</pre>
+
+		<h3 id=”mouseEvents”>Mouse Events  滑鼠相關事件</h3>
+		<pre class=”prettyprint”>
+		
+	function start() {
+		// Set up mouse callbacks
+		mouseMoveMethod(onMouseMove);
+		mouseClickMethod(addBall);
+		mouseDragMethod(updateLine);
+	}
+
+	function onMouseMove(e) {
+		println("Mouse is at (" + 
+		e.getX() + ", " +
+		e.getY() + ").");
+	}
+
+	function addBall(e) {
+		var ball = new Circle(20);
+		ball.setPosition(e.getX(), e.getY());
+		add(ball);
+	}
+
+	function updateLine(e) {
+		line.setEndpoint(e.getX(), e.getY());
+	}
+	
+	函數 開始() {
+		// 設定滑鼠回應
+		滑鼠移動方式 (滑鼠的移動);
+		滑鼠點擊方式 (加球);
+		滑鼠拖曳方式 (更新線條);
+	}
+
+	函數 滑鼠的移動(實例) {
+		印出連結檔("滑鼠在 (" + 
+		實例.取得X() + ", " +
+		實例.取得Y() + ").");
+	}
+
+	函數 加球(實例) {
+		變數 球 = 新的圓圈(20);
+		球.設定位置(實例.取得X(), 實例.取得Y());
+		加(球);
+	}
+
+	函數 更新線條(實例) {
+		線條.設定終止點 (實例.取得X(), 實例.取得Y());
+	}
+		</pre>
+		
+		<h3 id=”keyboardEvents”>Keyboard Events  鍵盤相關的事件</h3>
+		<pre class=”prettyprint”>
+		
+	function start() {
+		// Set up keyboard callbacks
+		keyDownMethod(keyDown);
+		keyUpMethod(keyUp);
+	}
+
+	function keyDown(e) {
+		if (e.keyCode == Keyboard.LEFT) {
+			ball.move(-5, 0);
+		}
+		if(e.keyCode == Keyboard.letter('K')){
+			println("You pressed K");
+		}
+	}
+
+	function keyUp(e) {
+		println("You lifted up a key");
+	}
+
+	函數 開始() {
+		// 設定鍵盤回應
+		偵測到鍵盤有按鍵被按住的方式 (有按鍵被按住);
+		偵測被按住的按鍵已被放開的方式 (已按住按鍵被放開);
+	}
+
+	函數有按鍵被按住(實例) {
+		如果 (實例.按鍵碼 == 鍵盤.左邊) {
+			球.移動(-5, 0);
+		}
+		如果(實例.按鍵碼 == 鍵盤.字母('K')){
+			印出連結檔("你按住K");
+		}
+	}
+
+	函數已按住按鍵被放開(e) {
+		印出連結檔("你放開一個按鍵");
+	}
+		</pre>
+
+		<h3 id=”misc”>Misc  其他</h3>
+		<pre class=”prettyprint”>
+		
+	function start() {
+		mouseClickMethod(turnRed); 
+	}
+
+	// If you click on an object, turn it red.
+	function turnRed(e) {
+		var elem = getElementAt(e.getX(), e.getY());
+		if (elem != null) {
+			elem.setColor(Color.red);
+		}
+	}
+
+	函數 開始() {
+		滑鼠點擊方式(變紅色); 
+	}
+
+	// 如果你點擊一個物件，將它變成紅色
+	函數 變紅色(e) {
+		變數 元素 = 取得元素於(實例.取得X(), 實例.取得Y());
+		如果(元素 != 零) {
+			元素.設定顏色(顏色.紅色);
+		}
+	}
+		</pre>
+		
+	<h2>Data Structures  數據結構</h2>
+		<h3 id=”arrays”>Arrays  陣列</h3>
+		<pre class="prettyprint">
+	// Create an empty array
+	var arr = [];
+
+	// Create an array with values
+	var arr = [1, 2, 4];
+
+	// An array can have any type
+	var arr = [4, "hello", x];
+
+	// Access an element in an array
+	var elem = arr[i];
+
+	var firstElem = arr[0];
+
+	// Set an element in an array
+	arr[4] = 9;
+
+	// Looping over an array
+	for(var i = 0; i &#60; arr.length; i++){
+		var cur = arr[i];
+		// process cur
+	}
+
+	// length of an array
+	var length = arr.length;
+
+	// Add to an array
+	arr.push(elem);
+
+	// Remove last element from array
+	var last = arr.pop();
+
+	// Finding an element in a list
+	var index = arr.indexOf(5);
+
+	// Remove an element from a list at index i
+	arr.remove(i)
+
+	// 創造一個空白的陣列
+	變數 陣列 = [];
+
+	// 創造一個有數值的陣列
+	變數 陣列 = [1, 2, 4];
+
+	// 陣列中可以有任何種類
+	變數 陣列 = [4, "哈囉", x];
+
+	// 存取陣列中的元素
+	變數 元素 = 陣列[i];
+
+	變數 第一個元素 = 陣列[0];
+
+	// 在陣列中設置一個元素
+	陣列[4] = 9;
+
+	// 重複執行一個陣列
+	當(變數 i = 0; i &#60; 變數.長度; i++){
+		變數 指標 = 陣列[i];
+		// 過程 指標
+	}
+
+	// 陣列的長度
+	變數 長度 = 陣列.長度;
+
+	// 增加至陣列
+	陣列.推(元素);
+
+	// 從陣列中移除最後的元素
+	變數 最後 = 陣列.取出();
+
+	// 在清單中尋找元素
+	變數 清單 = 陣列.清單的(5);
+
+	// 從索引i中的清單裡移除一個元素
+	 陣列.移除(i)
+		</pre>
+
+		<h3 id=”mapsObjects”>Maps/Objects  關聯陣列/物件</h3>
+		<pre class=”prettyprint”>
+		
+	// Object literal
+	var obj = {
+		name: "Jeremy",
+		color: "blue" 
+	};
+
+	// Objects/Maps have a collection of key, value pairs
+
+	// Set a value
+	obj["Jeremy"] = "123-4567";
+
+	// Get a value for a key
+	var phone = obj["Jeremy"];
+
+	// Loop over an object
+	for(var key in obj){
+		var val = obj[key];
+		// process key and val
+	}
+
+	//物件實字
+	變數 物件 = {
+		名字: "傑洛米",
+		顏色: "藍色" 
+	};
+
+		// 物件／關聯陣列有大量的鍵值對
+
+	// 設定一個數值
+	物件["傑洛米"] = "123-4567";
+
+	// 添加一個鍵的值
+	變數 電話 = 物件["傑洛米"];
+
+	// 重複執行一個物件
+	當(變數 按鍵 在 物件){
+		變數 值 = 物件[按鍵];
+		// 執行鍵值 
+	}
+		</pre>
+
+		<h3 id=”sets”>Sets  無序群集</h3>
+		<pre class=”prettyprint”>
+		
+	// Make a new set named "newSet"
+	var newSet = new Set();
+
+	// Add to a set
+	newSet.add(5);
+
+	// Does a set contain a value
+	newSet.contains(5); // returns a boolean
+
+	// Number of elements in the set
+	newSet.size(); // returns an integer
+
+	// 創造一個新的群集並將其命名為“新群集”	
+	變數 新群集 = 新群集();
+
+	// 增加至群集
+	新群集.增加(5);
+
+	// 群集是否含有一個數值 
+	新群集.包含(5); // 傳回布爾值
+
+	// 群集內的元素數量
+	新群集.數量(); // 傳回一個整數
+		</pre>
+
+
+		<h3 id=”grids”>Grids  方格</h3>
+		<pre class=”prettyprint”>
+		
+	// Create a grid named "newGrid"
+	var newGrid = new Grid(rows, cols);
+
+	// Get a value in a grid
+	var elem = newGrid.get(row, col);
+
+	// Set a value in a grid
+	newGrid.set(row, col, val);
+
+	// Getting dimensions
+	var rows = newGrid.numRows();
+	var cols = newGrid.numCols();
+
+	// Is a row, col pair inbounds
+	newGrid.inBounds(row, col);
+
+	// Set all values in grid to initial value
+	newGrid.init(0); // sets all grid values to 0
+
+	// Initialze a grid from an array
+	newGrid.initFromArray([
+		[6, 3, 2], // 0th row
+		[2, 5, 1], // 1st row
+		[4, 3, 9], // 2nd row
+		[1, 5, 1] // 3rd row
+	]);
+
+	// 創造一個方格並將其命名為“新方格” 
+	變數 新方格 = 新方格 (行, 列);
+
+	// 在方格內取得一個數值
+	變數 元素 = 新方格.取得(行, 列);
+
+	// 在方格內設定一個數值
+	新方格.設定(行, 列, 值);
+
+	// 確認尺寸大小
+	變數 行 =新方格.行數();
+	變數 列 =新方格.列數();
+
+	// 輸入行列對
+	新方格.範圍內(行, 列);
+
+	// 將方格中的所有數值設為初始值
+	新方格.初始(0); // 將所有方格值設為0
+
+	//從陣列中初始化一個方格 
+	新方格.陣列中初始([
+		[6, 3, 2], // 第0行
+		[2, 5, 1], // 第1行
+		[4, 3, 9], // 第2行
+		[1, 5, 1] // 第3行
+	]);
+		</pre>
+		
+		<p><i class="fa fa-home fa-2x"></i><a href="../basicJavaHome.html"> Return to Graphics Home Page 返回顯卡首頁 </a></p>
+	</body>
+</html>

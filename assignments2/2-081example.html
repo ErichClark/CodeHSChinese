@@ -16,12 +16,50 @@
 			You are encouraged to play around with it, to see how it all works. 
 			When you are done, click the arrow to go to the next problem.<br>
 			這是我們在視頻中做了一個榜樣。我們鼓勵你玩它，看看它是如何工作的。當你完成後，單擊箭頭進入下一個問題。</p>
-		<h2>Goal Output 目標輸出 </h2>
-		<p></p>
 		<h2>Example Code 示例代碼 </h2>
-		<p class="hints">
-			CODE_HERE
-		</p>
+		<pre class="prettyprint">
+/* This program will add up numbers from 
+ * the user until they enter the sentinel
+ * value, and at the end will print the
+ * total sum. 
+ */
+var SENTINEL = -1;
+
+function start(){
+	var sum = 0;
+	
+	while(true){
+		var num = readInt("Enter a number: ");
+		if(num == SENTINEL){
+			break;
+		}
+		sum += num;
+	}
+	
+	println("The total was: " + sum);
+}
+
+/*這個程序加起來的數字，從 
+ *的用戶，直到他們進入定點 
+ *值，並在結束時將打印 
+ *總和。 
+ */ 
+可變定點=-1; 
+
+函數的開始（）{
+	變量總和=0;
+	
+	而（真）{
+		可變數目=讀整型（“請輸入一個數字：”）; 
+		如果（編號==定點）{
+			打破; 
+		}
+		總和+=號;
+	}
+	
+	打印線（以下簡稱“總的是：”+總和）; 
+}
+		</pre>
 		<p><i class="fa fa-home fa-2x"></i><a href="../basicJavaHome.html"> Return to Graphics Home Page 返回顯卡首頁 </a></p>
 	</body>
 </html>

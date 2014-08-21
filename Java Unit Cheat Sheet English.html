@@ -1,0 +1,521 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JavaScript Documentation</title>
+		<link type="text/css" rel="stylesheet" href="../css/karelStyle.css"
+			media="screen and (min-width: 481px)">
+		<link type="text/css" rel="stylesheet" href="../css/karelStyle.css"
+			media="screen and (max-width: 480px)">
+		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	</head>
+	<body>
+	JavaScript Documentation
+Printing to Console
+
+	println(str);
+	print(str);
+
+	// Example:
+	println("Hello world.");
+
+	// Printing without a new line:
+	print("Hello world. ");
+	print("How are you?");
+Variables
+
+	// Declare a variable
+	var myVarName;
+
+	// Initialize a variable
+	var myVarName = 5;
+
+	// Assign to an existing variable
+	myVarName = 10;
+
+	// Print a variable
+	println(myVarName);
+	println("The value is: " + myValue);
+User Input
+
+	// Read a string
+	var str = readLine(prompt);
+
+	// Read an integer
+	var num = readInt(prompt);
+
+	// Read a float
+	var cost = readFloat(prompt);
+
+	// You should replace the word prompt with
+	// the question you'd like to ask. For example:
+	var name = readLine("What is your name? ");
+	var age = readInt("What is your age? ");
+Comparison Operators
+
+	// Comparison operators return booleans (true/false values)
+
+	x == y 		// is x equal to y
+	x > y 		// is x greater than y
+	x >= y 		// is x greater than or equal to y
+	x < y 		// is x less than y
+	x <= y 		// is x less than or equal to y
+
+	// Comparison operators in if statements
+	if(x == y){
+		println("x and y are equal");
+	}
+
+	if(x > 5){
+		println("x is greater than 5.");
+	}
+Math
+
+	// Operators:
+	+	Addition
+	-	Subtraction
+	*	Multiplication
+	/	Division
+	%	Modulus (Remainder)
+	()	Parentheses (For order of operations)
+
+	// Examples
+	var z = x + y;
+	var w = x * y;
+
+	//Increment (add one)
+	x++
+
+	//Decrement (subtract one)
+	x--
+
+	//Shortcuts
+	x = x + y;		x += y;
+	x = x - y;		x -= y;
+	x = x * y;		x *= y;
+	x = x / y;		x /= y;
+
+	// Absolute value
+	var abs = Math.abs(x);
+
+	// Square root
+	var sqrt = Math.sqrt(x);
+Random Numbers
+
+	// Random integer between low and high
+	Randomizer.nextInt(low, high);		
+	Randomizer.nextBoolean();			
+	Randomizer.nextFloat(low, high);	
+	Randomizer.nextColor();		
+
+	var roll = Randomizer.nextInt(1,6);
+
+	var color = Randomizer.nextColor();
+Graphics
+
+Canvas
+
+	// returns the width of the canvas
+	getWidth();
+
+	// returns the height of the canvas
+	getHeight();
+
+	// Examples
+	var height = getHeight();
+
+	// Returns the x coordinate of the center
+	// of the canvas
+	var center = getWidth() / 2;
+
+	// Removes all objects from the canvas
+	removeAll();
+All Graphics Objects
+
+	// To get the type of the object
+	var type = obj.getType();
+
+	/*
+	could return:
+	'Circle'
+	'Rectangle'
+	'Text'
+	'Line'
+	*/
+Circles
+
+	// To make a circle
+	var circle = new Circle(radius);
+
+	// Example, circle with 50px radius
+	var circle = new Circle(50);
+	circle.setPosition(x, y);
+	circle.setColor(Color.red);
+	circle.setRadius(100);  // Change the radius
+
+	// Add to screen
+	add(circle);
+
+	// move the circle dx horizontally and dy vertically
+	circle.move(dx, dy);
+Rectangles
+
+	// To make a rectangle
+	var rect = new Rectangle(width, height);
+
+	// Example, 200x50 rectangle
+	var rect = new Rectangle(200, 50);
+	rect.setPosition(x, y);
+	rect.setColor(Color.blue);
+
+	// Add to screen
+	add(rect);
+
+	// move the rect dx horizontally and dy vertically
+	rect.move(dx, dy);
+Lines
+
+	// To draw a line from (x1, y1) to (x2, y2)
+	var line = new Line(x1, y1, x2, y2);
+
+	line.setColor(Color.green);
+
+	// Add to screen
+	add(line);
+
+	// move the line dx horizontally and dy vertically
+	line.move(dx, dy);
+
+	// change the starting point of the line to (x1, y1)
+	line.setPosition(x1, y1);
+
+	// change the end point of the line to (x2, y2)
+	line.setEndpoint(x2, y2);
+Text
+
+	// To make a graphical text object
+	var txt = new Text(label, font);
+
+	// Example
+	var txt = new Text("Hello, world!", "30pt Arial");
+	txt.setPosition(x, y);
+	txt.setColor(Color.blue);
+
+	// Change what the text says
+	txt.setText("Goodbye!");
+
+	// Add to screen
+	add(txt);
+
+	// move the text dx horizontally and dy vertically
+	txt.move(dx, dy);
+Color
+
+	// There are many color constants. You can set an objects 
+	// color like
+	obj.setColor(color);
+
+	// Specifically,
+	obj.setColor(Color.RED);
+
+	// List of available colors:
+	Color.RED
+	Color.GREEN
+	Color.BLUE
+	Color.YELLOW
+	Color.CYAN
+	Color.ORANGE
+	Color.WHITE
+	Color.BLACK
+	Color.GRAY
+	Color.PURPLE
+
+	// You can also make your own color by giving a red, green,
+	// and blue component like
+	var color = new Color(r, g, b);
+
+	// The values are between 0-255 for each component.
+
+	// specifically
+	var color = new Color(255, 24, 180);
+
+	// Other fun functions
+	// Return a random color
+	var color = Color.randomRed();
+	var color = Color.randomGreen();
+	var color = Color.randomBlue();
+
+	// Get a random color from the randomizer
+	var color = Randomizer.nextColor();
+Booleans
+
+	// A boolean is either true or false
+	var myBoolean = true;
+
+	var anotherBoolean = false;
+
+	var result = readBoolean("Question? ");
+
+	// Not Operator
+	var x = !y; 	// x gets the opposite of y
+
+	// And Operator
+	var andExp = x && y;
+
+	// Or Operator
+	var orExp = x || y;
+
+	// You can combine many booleans!
+	var boolExp = x && (y || z);
+If Statements, If/Else, If/Else If/Else
+
+	if(BOOLEAN_EXPRESSION){
+		// code to execute if true
+	}
+
+	if(BOOLEAN_EXPRESSION){
+		// code if true
+	} else { 
+		// code if false
+	}
+
+	if(x < 0){
+		println("x is negative.");
+	}
+
+	if(color == "red" || color == "blue" || color == "yellow"){
+		println("Primary color.");
+	} else {
+		println("Not a primary color.");
+	}
+
+	// You can use else if if you have multiple 
+	// conditions, but only one should happen.
+	if(condition_1){
+
+	} else if(condition_2) {
+
+	} else if(condition_3) {
+
+	} else {
+
+	}
+
+
+	// You can always write these using nested 
+	// if/else. For example:
+	if(condition_1){
+		// code here runs if condition 1 is true
+	} else {
+		if(condition_2){
+			// if condition 2 is true
+		} else {
+			// and here if condition 2 is false
+		}
+	}
+For Loops
+
+	var COUNT = 5;
+
+	for(var i = 0; i < COUNT; i++){
+		/* Repeat code betweeen the brackets 5 times, 
+		 * as the COUNT variable is 5. */
+	}
+
+	// Print numbers 0-9
+	for(var i = 0; i < 10; i++){
+		println(i);
+	}
+While Loops
+
+	while(boolean expression){
+		/* Repeat code betweeen brackets while 
+		 * 'boolean expression' is true */
+	}
+
+	// Countdown from from 15 to 10
+	var i = 15; 
+	while(i > 10){
+		println(i);
+		i--;
+	}
+	// This is a loop and a half format
+	while(true){
+		// code
+		if(condition){
+			break;
+		}
+	}
+Timers
+
+	setTimer(fn, delay); // Create a timer
+	stopTimer(fn); 		 // Stop a timer
+
+	// Example: call moveBall every 40 milliseconds
+
+	function moveBall() {
+		ball.move(x, y);
+	}
+
+	function start() {
+		setTimer(moveBall, 40);	
+	}
+Mouse Events
+
+	function start() {
+		// Set up mouse callbacks
+		mouseMoveMethod(onMouseMove);
+		mouseClickMethod(addBall);
+		mouseDragMethod(updateLine);
+	}
+
+	function onMouseMove(e) {
+		println("Mouse is at (" + 
+				e.getX() + ", " +
+				e.getY() + ").");
+	}
+
+	function addBall(e) {
+		var ball = new Circle(20);
+		ball.setPosition(e.getX(), e.getY());
+		add(ball);
+	}
+
+	function updateLine(e) {
+		line.setEndpoint(e.getX(), e.getY());
+	}
+Keyboard Events
+
+	function start() {
+		// Set up keyboard callbacks
+		keyDownMethod(keyDown);
+		keyUpMethod(keyUp);
+	}
+
+	function keyDown(e) {
+		if (e.keyCode == Keyboard.LEFT) {
+			ball.move(-5, 0);
+		}
+		if(e.keyCode == Keyboard.letter('K')){
+			println("You pressed K");
+		}
+	}
+
+	function keyUp(e) {
+		println("You lifted up a key");
+	}
+Misc
+
+	function start() {
+		mouseClickMethod(turnRed);	
+	}
+
+	// If you click on an object, turn it red.
+	function turnRed(e) {
+		var elem = getElementAt(e.getX(), e.getY());
+		if (elem != null) {
+			elem.setColor(Color.red);
+		}
+	}
+Arrays
+
+	// Create an empty array
+	var arr = [];
+
+	// Create an array with values
+	var arr = [1, 2, 4];
+
+	// An array can have any type
+	var arr = [4, "hello", x];
+
+	// Access an element in an array
+	var elem = arr[i];
+
+	var firstElem = arr[0];
+
+	// Set an element in an array
+	arr[4] = 9;
+
+	// Looping over an array
+	for(var i = 0; i < arr.length; i++){
+		var cur = arr[i];
+		// process cur
+	}
+
+	// length of an array
+	var length = arr.length;
+
+	// Add to an array
+	arr.push(elem);
+
+	// Remove last element from array
+	var last = arr.pop();
+
+	// Finding an element in a list
+	var index = arr.indexOf(5);
+
+	// Remove an element from a list at index i
+	arr.remove(i)
+Maps/Objects
+
+	// Object literal
+	var obj = {
+		name: "Jeremy",
+		color: "blue"	
+	};
+
+	// Objects/Maps have a collection of key, value pairs
+
+	// Set a value
+	obj["Jeremy"] = "123-4567";
+
+	// Get a value for a key
+	var phone = obj["Jeremy"];
+
+	// Loop over an object
+	for(var key in obj){
+		var val = obj[key];
+		// process key and val
+	}
+Sets
+
+	// Make a new set named "newSet"
+	var newSet = new Set();
+
+	// Add to a set
+	newSet.add(5);
+
+	// Does a set contain a value
+	newSet.contains(5); // returns a boolean
+
+	// Number of elements in the set
+	newSet.size(); // returns an integer
+Grids
+
+	// Create a grid named "newGrid"
+	var newGrid = new Grid(rows, cols);
+
+	// Get a value in a grid
+	var elem = newGrid.get(row, col);
+
+	// Set a value in a grid
+	newGrid.set(row, col, val);
+
+	// Getting dimensions
+	var rows = newGrid.numRows();
+	var cols = newGrid.numCols();
+
+	// Is a row, col pair inbounds
+	newGrid.inBounds(row, col);
+
+	// Set all values in grid to initial value
+	newGrid.init(0); // sets all grid values to 0
+
+	// Initialze a grid from an array
+	newGrid.initFromArray([
+		[6, 3, 2],	// 0th row
+		[2, 5, 1],	// 1st row
+		[4, 3, 9],	// 2nd row
+		[1, 5, 1]	// 3rd row
+	]);	
+</body>
